@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/" created="2025-10-14T14:12:38.567694+02:00" required="2.1.0" version="2.3.2">
+<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/" created="2025-10-15T12:44:24.603573+02:00" required="2.1.0" version="2.3.2">
 	<catalog dc:uri="https://www.fairmat-nfdi.eu/questions/FAIRmat_DFG">
 		<uri_prefix>https://www.fairmat-nfdi.eu/</uri_prefix>
 		<uri_path>FAIRmat_DFG</uri_path>
@@ -1809,7 +1809,7 @@ In your DMP, you should list all the formats of generated data, as well as the s
 		<uri_path>ASE</uri_path>
 		<dc:comment/>
 		<text lang="en">ASE</text>
-		<help lang="en">(.trag)</help>
+		<help lang="en">(.traj)</help>
 		<default_text lang="en"/>
 		<view_text lang="en"/>
 		<text lang="de"/>
@@ -2797,7 +2797,7 @@ Examples: *“NOMAD Metainfo schema for simulation outputs”, “NeXus/HDF5 for
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
 		<uri_path>documentation_tools_O2</uri_path>
 		<dc:comment/>
-		<text lang="en">Metadata will be documented using a paper-based electronic laboratory notebook</text>
+		<text lang="en">Metadata will be documented using a paper-based laboratory notebook</text>
 		<help lang="en"/>
 		<default_text lang="en">Specify which metadata will be recorded</default_text>
 		<view_text lang="en"/>
@@ -2938,7 +2938,8 @@ Each dataset should normally be described individually. If identical quality ass
 			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_dataset_quality/dfg-dsq_07" order="6"/>
 			<option dc:uri="https://www.fairmat-nfdi.eu/options/dataset_quality_O1" order="7"/>
 			<option dc:uri="https://www.fairmat-nfdi.eu/options/dataset_quality_O2" order="8"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_dataset_quality_FAIRmat/dfg-dsq_08" order="9"/>
+			<option dc:uri="https://www.fairmat-nfdi.eu/options/dataset_quality_O3" order="9"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_dataset_quality_FAIRmat/dfg-dsq_08" order="10"/>
 		</options>
 		<conditions/>
 	</optionset>
@@ -2960,7 +2961,7 @@ Each dataset should normally be described individually. If identical quality ass
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
 		<uri_path>dfg_dataset_quality/dfg-dsq_01</uri_path>
 		<dc:comment/>
-		<text lang="en">Repetitions of measurements</text>
+		<text lang="en">Replication and independent reproduction of measurements</text>
 		<help lang="en"/>
 		<default_text lang="en"/>
 		<view_text lang="en"/>
@@ -3068,6 +3069,20 @@ Each dataset should normally be described individually. If identical quality ass
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
+	<option dc:uri="https://www.fairmat-nfdi.eu/options/dataset_quality_O3">
+		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
+		<uri_path>dataset_quality_O3</uri_path>
+		<dc:comment/>
+		<text lang="en">Regular calibration and maintenance of instruments/tools</text>
+		<help lang="en"/>
+		<default_text lang="en"/>
+		<view_text lang="en"/>
+		<text lang="de"/>
+		<help lang="de"/>
+		<default_text lang="de"/>
+		<view_text lang="de"/>
+		<additional_input/>
+	</option>
 	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_dataset_quality_FAIRmat/dfg-dsq_08">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
 		<uri_path>dfg_dataset_quality_FAIRmat/dfg-dsq_08</uri_path>
@@ -3089,7 +3104,7 @@ Each dataset should normally be described individually. If identical quality ass
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/metadata/quality_assurance"/>
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
-		<help lang="en">Indicate whether you will apply discipline-specific standards, facility QA protocols, or community guidelines to ensure reliable and comparable data. Mention relevant standards where applicable.</help>
+		<help lang="en">Please indicate which standards or guidelines will be applied to ensure data quality and comparability. This may include community standards (e.g., CIF, NeXus, NOMAD MetaInfo), facility QA protocols (e.g., beamline calibration), or institutional quality procedures. Where applicable, provide references or links to the relevant standards.</help>
 		<text lang="en">Used standards and guidelines:</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
@@ -3700,7 +3715,7 @@ Examples: “Daily incremental backups and weekly full backups on the university
 		<is_optional>False</is_optional>
 		<help lang="en">Describe which datasets from your project are most relevant for reuse and explain who could reuse them (e.g., researchers in your field, industrial partners, educators) and for what purpose (e.g., benchmarking, validation, machine learning, comparison, teaching).
 
-*Example: Processed diffraction patterns and TEM images can be reused by materials scientists for benchmarking new structural models, and by industry partners for quality control. Simulation input files may be reused by computational scientists for validation and training machine-learning models. Raw experimental logs are not disseminated*</help>
+*Example: Processed diffraction patterns and TEM images can be reused by materials scientists for benchmarking new structural models, and by industry partners for quality control. Simulation input files may be reused by computational scientists for validation and training machine-learning models. Raw experimental logs are not disseminated.*</help>
 		<text lang="en">Reuse of datasets generated by the project:</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
@@ -3775,7 +3790,7 @@ The importance of data publication is underscored once again by the
 		<is_optional>False</is_optional>
 		<help lang="en">Describe the repositories, infrastructures, or platforms where your data will be shared. Choose trustworthy repositories that provide persistent identifiers and community recognition (e.g., NOMAD for materials science, Zenodo, institutional repositories). You may also list complementary dissemination channels (journal supplementary material, project website).
 
-*Example: “Simulation outputs will be shared in the NOMAD Repository with DOIs. Measurement data not suitable for NOMAD will be deposited in Zenodo. For small data tables, supplementary material at publishers will be used.”*</help>
+*Example: “Simulation outputs will be shared in the NOMAD Repository with DOIs. Measurement data not suitable for NOMAD will be deposited in Zenodo. Small data tables may be provided as supplementary material alongside the publication.”*</help>
 		<text lang="en">Sharing of datasets:</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
@@ -3859,7 +3874,7 @@ The importance of data publication is underscored once again by the
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
 		<uri_path>dataset_license_types_FAIRmat/71</uri_path>
 		<dc:comment>https://creativecommons.org/licenses/by/4.0/legalcode</dc:comment>
-		<text lang="en">Creative Commons Attribution (CC-BY)</text>
+		<text lang="en">Creative Commons Attribution (CC BY)</text>
 		<help lang="en">https://creativecommons.org/licenses/by/4.0/legalcode.en</help>
 		<default_text lang="en"/>
 		<view_text lang="en"/>
@@ -3873,7 +3888,7 @@ The importance of data publication is underscored once again by the
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
 		<uri_path>dataset_license_types_FAIRmat/73</uri_path>
 		<dc:comment>https://creativecommons.org/licenses/by-nc/4.0/legalcode</dc:comment>
-		<text lang="en">Creative Commons Attribution-NonCommercial (CC-BY-NC)</text>
+		<text lang="en">Creative Commons Attribution-NonCommercial (CC BY-NC)</text>
 		<help lang="en">https://creativecommons.org/licenses/by-nc/4.0/legalcode.en</help>
 		<default_text lang="en"/>
 		<view_text lang="en"/>
@@ -3887,7 +3902,7 @@ The importance of data publication is underscored once again by the
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
 		<uri_path>dataset_license_types_FAIRmat/74</uri_path>
 		<dc:comment>https://creativecommons.org/licenses/by-nd/4.0/legalcode</dc:comment>
-		<text lang="en">Creative Commons Attribution-NoDerivatives (CC-BY-ND)</text>
+		<text lang="en">Creative Commons Attribution-NoDerivatives (CC BY-ND)</text>
 		<help lang="en">https://creativecommons.org/licenses/by-nd/4.0/legalcode.en</help>
 		<default_text lang="en"/>
 		<view_text lang="en"/>
@@ -3901,7 +3916,7 @@ The importance of data publication is underscored once again by the
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
 		<uri_path>dataset_license_types_FAIRmat/75</uri_path>
 		<dc:comment>https://creativecommons.org/licenses/by-sa/4.0/legalcode</dc:comment>
-		<text lang="en">Creative Commons Attribution-ShareAlike (CC-BY-SA)</text>
+		<text lang="en">Creative Commons Attribution-ShareAlike (CC BY-SA)</text>
 		<help lang="en">https://creativecommons.org/licenses/by-sa/4.0/legalcode.en</help>
 		<default_text lang="en"/>
 		<view_text lang="en"/>
@@ -4203,7 +4218,9 @@ The importance of data publication is underscored once again by the
 		<is_collection>False</is_collection>
 		<title lang="en">Legal Aspects of Data</title>
 		<short_title lang="en"/>
-		<help lang="en"/>
+		<help lang="en">Legal aspects of research data are often complex. If unclear, consult your institution’s RDM policy, legal/IP office, or data protection officer. Provide references or links to institutional documents wherever possible.
+
+An overview of the legal aspects of research data management in the field of condensed-matter physics and materials science is provided in the &lt;a href=&quot;https://www.fairmat-nfdi.eu/uploads/Area%20F/FAIRmat_Legal_Guide_v1.1_interactive_PDF.pdf&quot;&gt;FAIRmat Legal Guide&lt;/a&gt;.</help>
 		<verbose_name lang="en"/>
 		<title lang="de"/>
 		<short_title lang="de"/>
@@ -4251,15 +4268,13 @@ The importance of data publication is underscored once again by the
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/ipr"/>
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
-		<help lang="en">Explain who holds ownership and how rights are regulated. Mention:
+		<help lang="en">Explain who holds the rights of use and how they are regulated. Mention: Institutional vs. industrial rights of use, planned licenses (e.g., CC BY, CC0, MIT, GPL), and any embargo for publications or patents.
 
-- Institutional vs. industrial ownership.
-- Planned licenses (e.g., CC BY, CC0, MIT, GPL).
-- Any embargo for publications or patents.
+If unclear who holds rights of use, you can check your institutes RDM policy or consult your institution’s legal/IP office. If possible, provide a reference (e.g., link to an institutional policy or agreement.
 
 Example:
-“Simulation input/output data will be published under CC BY 4.0. Proprietary datasets remain accessible only to partners. All software scripts will be released under the MIT license.”</help>
-		<text lang="en">How will intellectual property rights (IPR), copyright, and ownership of the generated data be managed?</text>
+“All simulation input/output data will be published under CC BY 4.0. If not specified, in addition to the copyright holder, the project’s PIs hold the usage rights of the generated data, which is contractually agreed and accessible under this link “link to the ”. Proprietary datasets generated in collaboration with industrial partners will remain accessible only to those partners, regulated through their specific contractual agreements. All software scripts will be released under the MIT license after an embargo period of 6 months to allow for patent filing.”</help>
+		<text lang="en">How will intellectual property rights (IPR, e.g., copyright, patents, etc.) and usage rights for the generated data be managed?</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
 		<help lang="de"/>
@@ -4293,7 +4308,8 @@ Example:
 		<is_collection>True</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">It is possible that there are reasons that can speak against a (direct) publication of the data. This can be, for example, the protection of personal data or the commercial or industrial use of the data. Confidentiality related to security issues can also be a reason. You can find more information in &lt;i&gt;&lt;a href=&quot;https://wissenschaften-integritaet.de/kodex/fertigung-von-offentlichem-zugang-zu-forschungsales/&quot; target=&quot;_blank&quot;&gt;Guideline 13 of the code on Good Scientific Practice&lt;/a&gt;&lt;/i&gt;.&lt;br/&gt;
-Please keep in mind that the data can be published after a certain blocking or embargo period and that you can also prepare this publication now.</help>
+
+Please keep in mind that even if immediate publication is not possible (e.g., due to embargo, patents, or contractual agreements), you should plan how and when the data will be made available at a later stage. Where possible, prepare the data and metadata in advance so that publication can take place once the restriction ends.</help>
 		<text lang="en">Do you anticipate any implications or restrictions regarding subsequent publication or accessibility?</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
@@ -4428,8 +4444,8 @@ Please keep in mind that the data can be published after a certain blocking or e
 		<is_collection>False</is_collection>
 		<title lang="en">Responsibilities for Research Data Management</title>
 		<short_title lang="en">Responsibilities</short_title>
-		<help lang="en">This page asks you to define who is responsible for handling research data during and after your project.
-Define who is responsible for research data management (RDM) in your project. This includes both the main contact person and, if relevant, additional roles for specific tasks such as data curation, metadata, backups, PID maintenance, and digital preservation.
+		<help lang="en">This page asks you to define who is responsible for handling research data during and after your project. Please specify the main contact person for research data management (RDM) in your project, as well as any additional roles for specific tasks such as data curation, metadata, backups, PID maintenance, or digital preservation. It is also important to note that, in line with the DFG Code of Conduct, research data should be retained for at least 10 years.
+According to the DFG’s recommendations, the overall responsibility for ensuring careful data management generally lies with the project leader(s) (PIs). However, dedicated staff or external infrastructures may carry out specific tasks.
 
 *According to the DFG, the PI has the overall responsibility for ensuring good data management. However, dedicated staff or external infrastructures may carry out specific tasks. Research data must be retained for at least 10 years following the DFG Code of Conduct.*</help>
 		<verbose_name lang="en"/>
@@ -4680,7 +4696,9 @@ Define who is responsible for research data management (RDM) in your project. Th
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/data_management/name"/>
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
-		<help lang="en">This refers to the person responsible during the project phase. Assignments beyond the project can be given in the “long-term contact” question. Recommended format: title, first name, last name, ORCID (if available), professional position, affiliation, contact details, role.</help>
+		<help lang="en">This refers to the person responsible during the project phase. If you want to specify who will take responsibility after the project ends, you should use the next question (“long-term contact”). 
+
+*Recommended format: title, first name, last name, ORCID (if available), professional position, affiliation, contact details, role.*</help>
 		<text lang="en">Who is the main contact person for questions related to data management?</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
@@ -4721,8 +4739,8 @@ Define who is responsible for research data management (RDM) in your project. Th
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/preservation/responsible_person/name"/>
 		<is_collection>True</is_collection>
 		<is_optional>False</is_optional>
-		<help lang="en">Examples of this are the allocation of access data/access authorizations, the optimization of storage space after a certain retention period or the transfer of authority to a new contact person. Such decisions are necessary, for example, in the event of a loss of access data, a new access request or the departure of the previous contact person. We recommend to name the head of department or the department itself.</help>
-		<text lang="en">What persons or institutions can be mentioned as the long-term contact who can decide on the data?</text>
+		<help lang="en">This guarantees the continuity of responsibility once the project has ended. The long-term contact manages tasks such as maintaining or transferring access credentials, approving new access requests, handling storage optimization after retention periods, or authorizing future data use. Where possible, it is recommended to name a stable entity (e.g., the head of department or the department itself) rather than an individual.</help>
+		<text lang="en">Who will serve as the long-term contact person or institution responsible for decisions regarding the project data after its completion?</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
 		<help lang="de"/>
@@ -5054,7 +5072,7 @@ DFG allows you to request project-specific costs for data preparation, documenta
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">Please estimate the effort in person-months (1 PM = monthly working time of a full-time employee). This includes time spent by researchers, postdocs, PhDs, or data stewards for documentation, processing, and repository submission.</help>
-		<text lang="en">What personnel costs are incurred for data management as part of the collection, creation or acquisition of data in the project?</text>
+		<text lang="en">What personnel effort is required for data management in your project?</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
 		<help lang="de"/>
@@ -5094,8 +5112,8 @@ DFG allows you to request project-specific costs for data preparation, documenta
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/costs/creation/non_personnel"/>
 		<is_collection>True</is_collection>
 		<is_optional>False</is_optional>
-		<help lang="en">Name resources provided by your institution (basic equipment) as well as those you request funding for. Consider technical infrastructure, IT services, storage, software licenses, and expertise (e.g., data managers or IT staff).</help>
-		<text lang="en">Which resources (costs; time or other) are required to implement adequate handling of research data within the project?</text>
+		<help lang="en">Name resources provided by your institution (basic equipment) as well as those you request funding for. Consider technical infrastructure, IT services, storage, or software licenses.</help>
+		<text lang="en">Which resources (costs, time or infrastructure) are required to ensure adequate handling of research data within the project?</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
 		<help lang="de"/>
@@ -5141,7 +5159,7 @@ DFG allows you to request project-specific costs for data preparation, documenta
 		<uri_prefix>https://www.fairmat-nfdi.eu/</uri_prefix>
 		<uri_path>costs_non-personnel_o1</uri_path>
 		<dc:comment/>
-		<text lang="en">Infrastructure resource: archives</text>
+		<text lang="en">Archives</text>
 		<help lang="en"/>
 		<default_text lang="en"/>
 		<view_text lang="en"/>
@@ -5155,7 +5173,7 @@ DFG allows you to request project-specific costs for data preparation, documenta
 		<uri_prefix>https://www.fairmat-nfdi.eu/</uri_prefix>
 		<uri_path>costs_non-personnel_o2</uri_path>
 		<dc:comment/>
-		<text lang="en">Infrastructure resource: database</text>
+		<text lang="en">Database</text>
 		<help lang="en"/>
 		<default_text lang="en"/>
 		<view_text lang="en"/>
@@ -5169,7 +5187,7 @@ DFG allows you to request project-specific costs for data preparation, documenta
 		<uri_prefix>https://www.fairmat-nfdi.eu/</uri_prefix>
 		<uri_path>costs_non-personnel_o3</uri_path>
 		<dc:comment/>
-		<text lang="en">Infrastructure resource: server</text>
+		<text lang="en">Server</text>
 		<help lang="en"/>
 		<default_text lang="en"/>
 		<view_text lang="en"/>
@@ -5183,7 +5201,7 @@ DFG allows you to request project-specific costs for data preparation, documenta
 		<uri_prefix>https://www.fairmat-nfdi.eu/</uri_prefix>
 		<uri_path>costs_non-personnel_o4</uri_path>
 		<dc:comment/>
-		<text lang="en">Infrastructure resource: software licenses</text>
+		<text lang="en">Software licenses</text>
 		<help lang="en"/>
 		<default_text lang="en"/>
 		<view_text lang="en"/>
@@ -5197,7 +5215,7 @@ DFG allows you to request project-specific costs for data preparation, documenta
 		<uri_prefix>https://www.fairmat-nfdi.eu/</uri_prefix>
 		<uri_path>costs_non-personnel_o5</uri_path>
 		<dc:comment/>
-		<text lang="en">other</text>
+		<text lang="en">Other</text>
 		<help lang="en"/>
 		<default_text lang="en"/>
 		<view_text lang="en"/>
