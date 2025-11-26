@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/" created="2025-10-28T14:51:42.100689+01:00" required="2.1.0" version="2.3.2">
+<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/" created="2025-11-14T17:33:19.496320+01:00" required="2.1.0" version="2.3.2">
 	<catalog dc:uri="https://www.fairmat-nfdi.eu/questions/FAIRmat_DFG">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
 		<uri_path>FAIRmat_DFG</uri_path>
@@ -881,7 +881,7 @@ Please select one option from the drop-down menu.</help>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/id"/>
 		<is_collection>True</is_collection>
-		<title lang="en">Generated data by the project (1/2)</title>
+		<title lang="en">Generated Data by the Project (1/2)</title>
 		<short_title lang="en">Generated (1/2)</short_title>
 		<help lang="en">In this section, please describe the research data that will be generated during the project. A clear description of the expected data is important for planning storage, documentation, publication, and long-term preservation.
 
@@ -1294,7 +1294,7 @@ Examples: Synchrotron beamline, Bruker D8 XRD, Thermo Scientific XPS, custom-bui
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/id"/>
 		<is_collection>True</is_collection>
-		<title lang="en">Generated data by the project (2/2)</title>
+		<title lang="en">Generated Data by the Project (2/2)</title>
 		<short_title lang="en">Generated (2/2)</short_title>
 		<help lang="en">In this section, please describe the research data that will be generated during the project. A clear description of the expected data is important for planning storage, documentation, publication, and long-term preservation.
 
@@ -1327,9 +1327,9 @@ You can fill the information on this page for each dataset you have created in t
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
 		<uri_path>questionsets/data-formats</uri_path>
 		<dc:comment>parent question set for data formats</dc:comment>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/acronym"/>
+		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/format"/>
 		<is_collection>False</is_collection>
-		<title lang="en">Data File Formats</title>
+		<title lang="en">Data file formats</title>
 		<help lang="en">Select data formats relevant to your project. The options are grouped by category.</help>
 		<verbose_name lang="en"/>
 		<title lang="de"/>
@@ -1337,7 +1337,7 @@ You can fill the information on this page for each dataset you have created in t
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="http://example.com/terms/questions/data-formats/general-text" order="0"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data-formats/general-text" order="0"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data-formats/imaging" order="1"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data-formats/numerical-data" order="2"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data-formats/spectroscopy" order="3"/>
@@ -1348,8 +1348,15 @@ You can fill the information on this page for each dataset you have created in t
 		</questions>
 		<conditions/>
 	</questionset>
-	<question dc:uri="http://example.com/terms/questions/data-formats/general-text">
-		<uri_prefix>http://example.com/terms</uri_prefix>
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/format">
+		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
+		<key>format</key>
+		<path>project/dataset/format</path>
+		<dc:comment/>
+		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
+	</attribute>
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data-formats/general-text">
+		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
 		<uri_path>data-formats/general-text</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/format"/>
@@ -1377,13 +1384,6 @@ You can fill the information on this page for each dataset you have created in t
 		</optionsets>
 		<conditions/>
 	</question>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/format">
-		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>format</key>
-		<path>project/dataset/format</path>
-		<dc:comment/>
-		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
-	</attribute>
 	<optionset dc:uri="https://www.fairmat-nfdi.eu/options/data-formats/general-text">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
 		<uri_path>data-formats/general-text</uri_path>
@@ -2352,10 +2352,10 @@ Explain why this file format is suitable for your data. Possible aspects to cons
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
 		<uri_path>data_description_reused</uri_path>
 		<dc:comment/>
-		<attribute/>
+		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/reuse_existing"/>
 		<is_collection>True</is_collection>
-		<title lang="en">Use of existing data</title>
-		<short_title lang="en">Existing data</short_title>
+		<title lang="en">Use of Existing Data</title>
+		<short_title lang="en">Existing Data</short_title>
 		<help lang="en">This section describes how your project will make use of existing research data. Specify which datasets you intend to reuse, where they come from, under what conditions they can be accessed, and how they will be integrated into your project.
 
 Each dataset should be described individually. For every dataset, include the following information:
@@ -2364,9 +2364,7 @@ Each dataset should be described individually. For every dataset, include the fo
 
 - *Relevance:* Explain why the data are needed (e.g., benchmarking, validation, comparison, meta-analysis).
 
-- *Legal and ethical aspects:* Note any restrictions (e.g., embargoes, copyright, confidentiality) and explain how these will be respected.
-
-Please complete the form for each dataset. You can add a new dataset using the green button. Once created, datasets can be edited or deleted using the buttons in the top right corner.</help>
+- *Legal and ethical aspects:* Note any restrictions (e.g., embargoes, copyright, confidentiality) and explain how these will be respected.</help>
 		<verbose_name lang="en"/>
 		<title lang="de"/>
 		<short_title lang="de"/>
@@ -2385,6 +2383,13 @@ Please complete the form for each dataset. You can add a new dataset using the g
 			<condition dc:uri="https://www.fairmat-nfdi.eu/conditions/data_origin_3"/>
 		</conditions>
 	</page>
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/reuse_existing">
+		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
+		<key>reuse_existing</key>
+		<path>project/dataset/reuse_existing</path>
+		<dc:comment>Added for the purpose of stating the reasons &quot;if re-use of any existing data has been considered but discarded&quot;. EU Horizon Europe requires suggestions concerning this question, see Horizon Europe Data Management Plan Template, 05.05.2021, https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/temp-form/report/data-management-plan-template_he_en.docx</dc:comment>
+		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
+	</attribute>
 	<condition dc:uri="https://www.fairmat-nfdi.eu/conditions/data_origin_2">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
 		<uri_path>data_origin_2</uri_path>
@@ -2416,13 +2421,6 @@ Please complete the form for each dataset. You can add a new dataset using the g
 		</questions>
 		<conditions/>
 	</questionset>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/reuse_existing">
-		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>reuse_existing</key>
-		<path>project/dataset/reuse_existing</path>
-		<dc:comment>Added for the purpose of stating the reasons &quot;if re-use of any existing data has been considered but discarded&quot;. EU Horizon Europe requires suggestions concerning this question, see Horizon Europe Data Management Plan Template, 05.05.2021, https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/temp-form/report/data-management-plan-template_he_en.docx</dc:comment>
-		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
-	</attribute>
 	<question dc:uri="https://www.fairmat-nfdi.eu/questions/reused_data_Q3">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
 		<uri_path>reused_data_Q3</uri_path>
@@ -2820,7 +2818,7 @@ Mention key tools, scripts, or workflows (e.g., Jupyter, Snakemake, NOMAD parser
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
 		<uri_path>doc_quality</uri_path>
 		<dc:comment/>
-		<title lang="en">Documentation and data quality</title>
+		<title lang="en">Documentation and Data Quality</title>
 		<short_title lang="en">Documentation and Data Quality</short_title>
 		<title lang="de"/>
 		<short_title lang="de"/>
@@ -2966,7 +2964,7 @@ Examples: *“NOMAD Metainfo schema for simulation outputs”, “NeXus/HDF5 for
 		<is_collection>True</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">Mention whether you will use electronic lab notebooks (e.g., eLabFTW, Chemotion), institutional systems, or automated workflows (e.g., NOMAD CAMELS capturing instrument metadata). If manual entry is used, describe how you will ensure completeness and consistency.</help>
-		<text lang="en">Documentation tools:</text>
+		<text lang="en">Documentation tools</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
 		<help lang="de"/>
@@ -3100,7 +3098,7 @@ Examples include: NOMAD CAMELS, integrated ELN–instrument interfaces, or facil
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/id"/>
 		<is_collection>True</is_collection>
-		<title lang="en">Data quality</title>
+		<title lang="en">Data Quality</title>
 		<short_title lang="en">Data Quality</short_title>
 		<help lang="en">This page describes how you will ensure that your datasets are accurate, reliable, and consistent.
 
@@ -3125,7 +3123,7 @@ Each dataset should normally be described individually. If identical quality ass
 		<is_collection>True</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">Describe the procedures you will use to ensure that your datasets are accurate, reliable, and consistent. Typical measures include instrument calibration, use of reference samples, replication of measurements, error analysis, and validation against trusted datasets. For computational work, this may involve convergence testing, cross-code validation, or comparison with experimental results.</help>
-		<text lang="en">Measures to ensure data quality:</text>
+		<text lang="en">Measures to ensure data quality</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
 		<help lang="de"/>
@@ -3320,7 +3318,7 @@ Each dataset should normally be described individually. If identical quality ass
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">Indicate whether you will apply discipline-specific standards, facility QA protocols, or community guidelines to ensure reliable and comparable data. Mention relevant standards where applicable.</help>
-		<text lang="en">Used standards and guidelines:</text>
+		<text lang="en">Used standards and guidelines</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
 		<help lang="de"/>
@@ -3351,7 +3349,7 @@ Each dataset should normally be described individually. If identical quality ass
 		<uri_path>storage_backup</uri_path>
 		<dc:comment>Storing and archiving research data in a secure and accessible way is crucial for good research practice. In this section, describe your approach to storing and archiving data and metadata, as well as the planned procedures for dealing with sensitive data during the project.
 This section should deal with the short-term storage and archiving during the project period and completion. The objective is to ensure data accessibility among the project team and external collaborators, and to prevent loss of data due to unforeseen circumstances such as hardware malfunction, theft, or natural disasters.</dc:comment>
-		<title lang="en">Storage and backup during the research process</title>
+		<title lang="en">Storage and Backup during the Research process</title>
 		<short_title lang="en">Storage and Backup</short_title>
 		<title lang="de"/>
 		<short_title lang="de"/>
@@ -3366,7 +3364,7 @@ This section should deal with the short-term storage and archiving during the pr
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/storage"/>
 		<is_collection>False</is_collection>
-		<title lang="en">Data storage and access during the project</title>
+		<title lang="en">Data Storage and Access During the Project</title>
 		<short_title lang="en">Storage During the Project</short_title>
 		<help lang="en">This page describes where and how your research data will be stored during the project. Provide information on the storage infrastructure, access control, and organizational conventions. This section is about project-wide storage practices, not about individual datasets.</help>
 		<verbose_name lang="en"/>
@@ -3889,7 +3887,7 @@ Examples: “Daily incremental backups and weekly full backups on the university
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
 		<uri_path>repositories</uri_path>
 		<dc:comment>This section mainly describes the fate of the research data after the project is completed. Two key aspects should be included; data preservation and data dissemination.</dc:comment>
-		<title lang="en">Data exchange and long-term accessibility</title>
+		<title lang="en">Data Exchange and Long-term Accessibility</title>
 		<short_title lang="en">Sharing and Preservation</short_title>
 		<title lang="de"/>
 		<short_title lang="de"/>
@@ -3931,7 +3929,7 @@ Examples: “Daily incremental backups and weekly full backups on the university
 		<help lang="en">Describe which datasets from your project are most relevant for reuse and explain who could reuse them (e.g., researchers in your field, industrial partners, educators) and for what purpose (e.g., benchmarking, validation, machine learning, comparison, teaching).
 
 *Example: Processed diffraction patterns and TEM images can be reused by materials scientists for benchmarking new structural models, and by industry partners for quality control. Simulation input files may be reused by computational scientists for validation and training machine-learning models. Raw experimental logs are not disseminated*</help>
-		<text lang="en">Reuse of datasets generated by the project:</text>
+		<text lang="en">Reuse of datasets generated by the project</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
 		<help lang="de"/>
@@ -4006,7 +4004,7 @@ The importance of data publication is underscored once again by the
 		<help lang="en">Describe the repositories, infrastructures, or platforms where your data will be shared. Choose trustworthy repositories that provide persistent identifiers and community recognition (e.g., NOMAD for materials science, Zenodo, institutional repositories). You may also list complementary dissemination channels (journal supplementary material, project website).
 
 *Example: “Simulation outputs will be shared in the NOMAD Repository with DOIs. Measurement data not suitable for NOMAD will be deposited in Zenodo. For small data tables, supplementary material at publishers will be used.”*</help>
-		<text lang="en">Sharing of datasets:</text>
+		<text lang="en">Sharing of datasets</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
 		<help lang="de"/>
@@ -4480,7 +4478,7 @@ https://www.gnu.org/licenses/lgpl-3.0.en.html</dc:comment>
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
 		<uri_path>legal_ethical</uri_path>
 		<dc:comment>It is essential to be aware of legal issues and any specific details prior to initiating the research process. Researchers should clearly describe legal issues in the DMP of their research proposal and consult their research institution’s policies and requirements. We note that materials-science data are not so critical in the sense that they do not concern highly-confidential data about people (like patients in medical science). Still, the data must be handled with care.</dc:comment>
-		<title lang="en">Legal obligations and conditions</title>
+		<title lang="en">Legal Obligations and Conditions</title>
 		<short_title lang="en">Legal Obligations and Conditions</short_title>
 		<title lang="de"/>
 		<short_title lang="de"/>
@@ -4703,13 +4701,12 @@ Please keep in mind that the data can be published after a certain blocking or e
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
 		<uri_path>resp_resources</uri_path>
 		<dc:comment>It is important to consider the personnel and physical resources needed to execute and control the described data management strategies, tasks, and tools. Each member or organization participating in the research proposal should be assigned a clear role based on their expertise and time availability. This ensures that everyone knows what is expected of them when dealing with research data.</dc:comment>
-		<title lang="en">Data management responsibilities and resources</title>
-		<short_title lang="en">Responsibilities and resources</short_title>
+		<title lang="en">Data Management Responsibilities and Resources</title>
+		<short_title lang="en">Responsibilities and Resources</short_title>
 		<title lang="de"/>
 		<short_title lang="de"/>
 		<pages>
 			<page dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp" order="1"/>
-			<page dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_partner" order="2"/>
 			<page dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resources" order="3"/>
 		</pages>
 	</section>
@@ -4745,7 +4742,7 @@ Define who is responsible for research data management (RDM) in your project. Th
 		<dc:comment/>
 		<attribute/>
 		<is_collection>False</is_collection>
-		<title lang="en">Specific responsibilities</title>
+		<title lang="en">Specific Responsibilities</title>
 		<help lang="en">If there are other project partners who are responsible for subtasks in the RDM in this project, please specify.</help>
 		<verbose_name lang="en"/>
 		<title lang="de"/>
@@ -5048,256 +5045,6 @@ Define who is responsible for research data management (RDM) in your project. Th
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/preservation"/>
 	</attribute>
-	<page dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_partner">
-		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resp_partner</uri_path>
-		<dc:comment/>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/partner/responsibilities"/>
-		<is_collection>True</is_collection>
-		<title lang="en">Research data management partners</title>
-		<short_title lang="en">RDM Partners</short_title>
-		<help lang="en"/>
-		<verbose_name lang="en">Partner</verbose_name>
-		<title lang="de"/>
-		<short_title lang="de"/>
-		<help lang="de"/>
-		<verbose_name lang="de"/>
-		<questionsets/>
-		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_partner_Q1" order="1"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_partner_Q2" order="2"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_partner_Q3" order="3"/>
-		</questions>
-		<conditions>
-			<condition dc:uri="https://www.fairmat-nfdi.eu/conditions/resp_resources_resp_partner_condition"/>
-		</conditions>
-	</page>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/partner/responsibilities">
-		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>responsibilities</key>
-		<path>project/partner/responsibilities</path>
-		<dc:comment/>
-		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/partner"/>
-	</attribute>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/partner">
-		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>partner</key>
-		<path>project/partner</path>
-		<dc:comment/>
-		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project"/>
-	</attribute>
-	<condition dc:uri="https://www.fairmat-nfdi.eu/conditions/resp_resources_resp_partner_condition">
-		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resp_partner_condition</uri_path>
-		<dc:comment/>
-		<source dc:uri="https://rdmorganiser.github.io/terms/domain/project/partner"/>
-		<relation>eq</relation>
-		<target_text>1</target_text>
-		<target_option/>
-	</condition>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_partner_Q1">
-		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resp_partner_Q1</uri_path>
-		<dc:comment/>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/partner/name"/>
-		<is_collection>False</is_collection>
-		<is_optional>False</is_optional>
-		<help lang="en"/>
-		<text lang="en">Name of institution</text>
-		<default_text lang="en"/>
-		<verbose_name lang="en"/>
-		<help lang="de"/>
-		<text lang="de"/>
-		<default_text lang="de"/>
-		<verbose_name lang="de"/>
-		<default_option/>
-		<default_external_id/>
-		<widget_type>text</widget_type>
-		<value_type>text</value_type>
-		<maximum/>
-		<minimum/>
-		<step/>
-		<unit/>
-		<width/>
-		<optionsets/>
-		<conditions/>
-	</question>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/partner/name">
-		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>name</key>
-		<path>project/partner/name</path>
-		<dc:comment/>
-		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/partner"/>
-	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_partner_Q2">
-		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resp_partner_Q2</uri_path>
-		<dc:comment/>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/partner/contact_person/name"/>
-		<is_collection>False</is_collection>
-		<is_optional>False</is_optional>
-		<help lang="en"/>
-		<text lang="en">name of responsible person</text>
-		<default_text lang="en"/>
-		<verbose_name lang="en"/>
-		<help lang="de"/>
-		<text lang="de"/>
-		<default_text lang="de"/>
-		<verbose_name lang="de"/>
-		<default_option/>
-		<default_external_id/>
-		<widget_type>text</widget_type>
-		<value_type>text</value_type>
-		<maximum/>
-		<minimum/>
-		<step/>
-		<unit/>
-		<width/>
-		<optionsets/>
-		<conditions/>
-	</question>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/partner/contact_person/name">
-		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>name</key>
-		<path>project/partner/contact_person/name</path>
-		<dc:comment/>
-		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/partner/contact_person"/>
-	</attribute>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/partner/contact_person">
-		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>contact_person</key>
-		<path>project/partner/contact_person</path>
-		<dc:comment/>
-		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/partner"/>
-	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_partner_Q3">
-		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resp_partner_Q3</uri_path>
-		<dc:comment/>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/partner/responsibilities"/>
-		<is_collection>True</is_collection>
-		<is_optional>False</is_optional>
-		<help lang="en"/>
-		<text lang="en">Responsibility</text>
-		<default_text lang="en"/>
-		<verbose_name lang="en"/>
-		<help lang="de"/>
-		<text lang="de"/>
-		<default_text lang="de"/>
-		<verbose_name lang="de"/>
-		<default_option/>
-		<default_external_id/>
-		<widget_type>checkbox</widget_type>
-		<value_type>text</value_type>
-		<maximum/>
-		<minimum/>
-		<step/>
-		<unit/>
-		<width/>
-		<optionsets>
-			<optionset dc:uri="https://www.fairmat-nfdi.eu/options/responsibility_partner_roles"/>
-		</optionsets>
-		<conditions/>
-	</question>
-	<optionset dc:uri="https://www.fairmat-nfdi.eu/options/responsibility_partner_roles">
-		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>responsibility_partner_roles</uri_path>
-		<dc:comment/>
-		<provider_key/>
-		<options>
-			<option dc:uri="https://www.fairmat-nfdi.eu/options/responsibility_partner_roles_o1" order="1"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/options/responsibility_partner_roles_o2" order="2"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/options/responsibility_partner_roles_o3" order="3"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/options/responsibility_partner_roles_o5" order="5"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/options/responsibility_partner_roles_o6" order="6"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/options/responsibility_partner_roles_o7" order="7"/>
-		</options>
-		<conditions/>
-	</optionset>
-	<option dc:uri="https://www.fairmat-nfdi.eu/options/responsibility_partner_roles_o1">
-		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>responsibility_partner_roles_o1</uri_path>
-		<dc:comment/>
-		<text lang="en">data management</text>
-		<help lang="en"/>
-		<default_text lang="en"/>
-		<view_text lang="en"/>
-		<text lang="de"/>
-		<help lang="de"/>
-		<default_text lang="de"/>
-		<view_text lang="de"/>
-		<additional_input/>
-	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/options/responsibility_partner_roles_o2">
-		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>responsibility_partner_roles_o2</uri_path>
-		<dc:comment/>
-		<text lang="en">data curation</text>
-		<help lang="en"/>
-		<default_text lang="en"/>
-		<view_text lang="en"/>
-		<text lang="de"/>
-		<help lang="de"/>
-		<default_text lang="de"/>
-		<view_text lang="de"/>
-		<additional_input/>
-	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/options/responsibility_partner_roles_o3">
-		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>responsibility_partner_roles_o3</uri_path>
-		<dc:comment/>
-		<text lang="en">metadata documentation</text>
-		<help lang="en"/>
-		<default_text lang="en"/>
-		<view_text lang="en"/>
-		<text lang="de"/>
-		<help lang="de"/>
-		<default_text lang="de"/>
-		<view_text lang="de"/>
-		<additional_input/>
-	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/options/responsibility_partner_roles_o5">
-		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>responsibility_partner_roles_o5</uri_path>
-		<dc:comment/>
-		<text lang="en">data backups</text>
-		<help lang="en"/>
-		<default_text lang="en"/>
-		<view_text lang="en"/>
-		<text lang="de"/>
-		<help lang="de"/>
-		<default_text lang="de"/>
-		<view_text lang="de"/>
-		<additional_input/>
-	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/options/responsibility_partner_roles_o6">
-		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>responsibility_partner_roles_o6</uri_path>
-		<dc:comment/>
-		<text lang="en">data preservation</text>
-		<help lang="en"/>
-		<default_text lang="en"/>
-		<view_text lang="en"/>
-		<text lang="de"/>
-		<help lang="de"/>
-		<default_text lang="de"/>
-		<view_text lang="de"/>
-		<additional_input/>
-	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/options/responsibility_partner_roles_o7">
-		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>responsibility_partner_roles_o7</uri_path>
-		<dc:comment/>
-		<text lang="en">other</text>
-		<help lang="en">please specifiy</help>
-		<default_text lang="en"/>
-		<view_text lang="en"/>
-		<text lang="de"/>
-		<help lang="de"/>
-		<default_text lang="de"/>
-		<view_text lang="de"/>
-		<additional_input>textarea</additional_input>
-	</option>
 	<page dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resources">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
 		<uri_path>resp_resources_resources</uri_path>
