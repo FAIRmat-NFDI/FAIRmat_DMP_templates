@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/" created="2025-11-14T17:33:19.496320+01:00" required="2.1.0" version="2.3.2">
-	<catalog dc:uri="https://www.fairmat-nfdi.eu/questions/FAIRmat_DFG">
+<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/" created="2025-11-28T18:02:15.754716+01:00" required="2.1.0" version="2.3.2">
+	<catalog dc:uri="https://www.fairmat-nfdi.eu/questions/fairmat_dfg">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>FAIRmat_DFG</uri_path>
+		<uri_path>fairmat_dfg</uri_path>
 		<dc:comment>DFG Data Management Plan (DMP) template customized for the condensed matter physics and materials science community. Maintained by FAIRmat. Please note: this template follows DFG guidelines and reflects community best practices. For internal use, this field documents version history and responsible maintainers.</dc:comment>
 		<order>0</order>
 		<title lang="en">FAIRmat_DFG Data Management Plan (Condensed-Matter Physics &amp; Materials Science)</title>
-		<help lang="en">This catalog provides a structured Data Management Plan (DMP) template based on the requirements of the Deutsche Forschungsgemeinschaft (DFG). It is specifically tailored to the needs of the condensed matter physics and materials science community.
+		<help lang="en">This catalog provides a structured Data Management Plan (DMP) template based on the requirements of the Deutsche Forschungsgemeinschaft (DFG). It is specifically tailored to the needs of the condensed-matter physics and materials-science community.
 
 By using this catalog, you can ensure that your project complies with DFG guidelines while also aligning with community standards and FAIR data principles. The catalog covers key aspects of research data management, including data collection, documentation, storage, access, sharing, preservation, and reuse.
 
-Choose this catalog when preparing a DFG proposal or managing research data within a project in condensed matter physics or materials science.</help>
+Choose this catalog when preparing a DFG proposal for single-projects or when managing research data within a project in condensed-matter physics or materials science.
+
+If you have any questions about using this template, please contact fairmat@physik.hu-berlin.de</help>
 		<title lang="de">FAIRmat_DFG Datenmanagementplan (Festkörperphysik &amp; Materialwissenschaften)</title>
 		<help lang="de">Dieses Katalog stellt eine strukturierte Vorlage für einen Datenmanagementplan (DMP) gemäß den Anforderungen der Deutschen Forschungsgemeinschaft (DFG) dar. Er ist speziell auf die Bedürfnisse der Gemeinschaft der Festkörperphysik und Materialwissenschaften zugeschnitten.</help>
 		<sections>
@@ -44,7 +46,7 @@ Choose this catalog when preparing a DFG proposal or managing research data with
 		<dc:comment>On this page you can provide basic about the project and the data management plan, in addtion an introduction. The text should summarize the scientific objectives of the project and briefly describe the type of data that will be generated or reused.</dc:comment>
 		<attribute/>
 		<is_collection>False</is_collection>
-		<title lang="en">General Project Information</title>
+		<title lang="en">Project Information</title>
 		<short_title lang="en"/>
 		<help lang="en"/>
 		<verbose_name lang="en"/>
@@ -53,20 +55,20 @@ Choose this catalog when preparing a DFG proposal or managing research data with
 		<help lang="de"/>
 		<verbose_name lang="de"/>
 		<questionsets>
-			<questionset dc:uri="https://www.fairmat-nfdi.eu/questions/DMP_information_questionSet" order="5"/>
+			<questionset dc:uri="https://www.fairmat-nfdi.eu/questions/questionsets/dmp_information" order="5"/>
 		</questionsets>
 		<questions>
 			<question dc:uri="https://www.fairmat-nfdi.eu/questions/project_name" order="0"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/questions/project_acronym" order="1"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/questions/project_start" order="2"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/questions/project_end" order="3"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/dmp_authors_name" order="4"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/dmp_contact" order="4"/>
 		</questions>
 		<conditions/>
 	</page>
-	<questionset dc:uri="https://www.fairmat-nfdi.eu/questions/DMP_information_questionSet">
+	<questionset dc:uri="https://www.fairmat-nfdi.eu/questions/questionsets/dmp_information">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>DMP_information_questionSet</uri_path>
+		<uri_path>questionsets/dmp_information</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dmp"/>
 		<is_collection>False</is_collection>
@@ -78,7 +80,7 @@ Choose this catalog when preparing a DFG proposal or managing research data with
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/date" order="0"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/dmp_date" order="0"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/questions/dmp_version" order="1"/>
 		</questions>
 		<conditions/>
@@ -97,9 +99,9 @@ Choose this catalog when preparing a DFG proposal or managing research data with
 		<dc:comment/>
 		<parent/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/date">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/dmp_date">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>date</uri_path>
+		<uri_path>dmp_date</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dmp/dmp_date"/>
 		<is_collection>False</is_collection>
@@ -308,17 +310,17 @@ Choose this catalog when preparing a DFG proposal or managing research data with
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/schedule"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/dmp_authors_name">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/dmp_contact">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>dmp_authors_name</uri_path>
+		<uri_path>dmp_contact</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/coordination/name"/>
 		<is_collection>True</is_collection>
 		<is_optional>False</is_optional>
-		<help lang="en">Indicate the persons or institutions that are responsible for coordinating the overall project. This usually includes the principal investigator (PI), project leader, or a coordinating institution. 
+		<help lang="en">Indicate the persons or institutions responsible for coordinating the overall project. This typically includes the principal investigator (PI), project leader, or a coordinating institution. 
 Provide full details such as name, affiliation, role, and contact information. 
 
-If the project is part of a consortium, specify the central coordination office or lead partner. This information ensures clarity on who oversees the project and serves as the primary contact point for funders, partners, and data management responsibilities.</help>
+If the project is part of a consortium, specify the central coordination office or lead partner. This information ensures clarity on who oversees the project and serves as the primary contact point for funders, partners, and data-management responsibilities.</help>
 		<text lang="en">Persons or institutions responsible for the project coordination</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
@@ -384,7 +386,7 @@ For example, you can use the introduction to:
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
 		<uri_path>introduction_text</uri_path>
 		<dc:comment/>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/research_question"/>
+		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/research_question/title"/>
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">The free-text field can be filled with an existing project abstract (e.g., from a proposal) or with a short summary tailored for the data management plan. Aim for 150–300 words.</help>
@@ -407,6 +409,13 @@ For example, you can use the introduction to:
 		<optionsets/>
 		<conditions/>
 	</question>
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/research_question/title">
+		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
+		<key>title</key>
+		<path>project/research_question/title</path>
+		<dc:comment/>
+		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/research_question"/>
+	</attribute>
 	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/research_question">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
 		<key>research_question</key>
@@ -526,15 +535,15 @@ For example, you can use the introduction to:
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_project_Q1" order="1"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_project_Q2" order="2"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_project_Q4" order="4"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_project_q1" order="1"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_project_q2" order="2"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_project_q4" order="4"/>
 		</questions>
 		<conditions/>
 	</page>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_project_Q1">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_project_q1">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>legal_project_Q1</uri_path>
+		<uri_path>legal_project_q1</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/legal_aspects/official_approval/statutatory_approval/yesno"/>
 		<is_collection>False</is_collection>
@@ -658,9 +667,9 @@ For example, you can use the introduction to:
 		<view_text lang="de"/>
 		<additional_input>text</additional_input>
 	</option>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_project_Q2">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_project_q2">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>legal_project_Q2</uri_path>
+		<uri_path>legal_project_q2</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/legal_aspects/official_approval/statutatory_approval/title"/>
 		<is_collection>False</is_collection>
@@ -692,15 +701,15 @@ For example, you can use the introduction to:
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/legal_aspects/official_approval/statutatory_approval"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_project_Q4">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_project_q4">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>legal_project_Q4</uri_path>
+		<uri_path>legal_project_q4</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/additional_rdm_policy/yesno"/>
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">List codes of conduct, professional standards, or subject-specific rules relevant to your project.
-Examples: the DFG Code of Conduct (Guidelines for Safeguarding Good Research Practice), laboratory safety codes, or community standards, or institutional data policy.</help>
+Examples: the DFG Code of Conduct (Guidelines for Safeguarding Good Research Practice), laboratory safety codes,  community standards, or institutional data policy.</help>
 		<text lang="en">Are there any significant research codes or professional standards to be taken into account?</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
@@ -765,13 +774,13 @@ Examples: the DFG Code of Conduct (Guidelines for Safeguarding Good Research Pra
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_intro_Q1" order="1"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_intro_q1" order="1"/>
 		</questions>
 		<conditions/>
 	</page>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_intro_Q1">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_intro_q1">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>data_description_intro_Q1</uri_path>
+		<uri_path>data_description_intro_q1</uri_path>
 		<dc:comment>In this page, you are asked to characterize the type of research data relevant to your project. Clearly describing whether you will generate new data, reuse existing datasets, or combine both is an essential first step in the data management plan.
 Indicating the source and nature of your data helps clarify responsibilities, applicable standards, and later decisions on storage, sharing, and preservation.</dc:comment>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/origin"/>
@@ -907,10 +916,10 @@ You can create several datasets in this section to cover the different types of 
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_Q1" order="0"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_Q2" order="1"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_Q3" order="2"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_Q4" order="3"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_q1" order="0"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_q2" order="1"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_q3" order="2"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_q4" order="3"/>
 		</questions>
 		<conditions>
 			<condition dc:uri="https://www.fairmat-nfdi.eu/conditions/data_origin"/>
@@ -942,9 +951,9 @@ You can create several datasets in this section to cover the different types of 
 		<target_text/>
 		<target_option dc:uri="https://www.fairmat-nfdi.eu/options/generated-reuse"/>
 	</condition>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_Q1">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_q1">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>data_description_generated_Q1</uri_path>
+		<uri_path>data_description_generated_q1</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/title"/>
 		<is_collection>False</is_collection>
@@ -976,9 +985,9 @@ You can create several datasets in this section to cover the different types of 
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_Q2">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_q2">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>data_description_generated_Q2</uri_path>
+		<uri_path>data_description_generated_q2</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/description"/>
 		<is_collection>False</is_collection>
@@ -1010,11 +1019,11 @@ You can create several datasets in this section to cover the different types of 
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_Q3">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_q3">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>data_description_generated_Q3</uri_path>
+		<uri_path>data_description_generated_q3</uri_path>
 		<dc:comment/>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/creation_methods"/>
+		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/method"/>
 		<is_collection>True</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">Select the types of data that will be part of this dataset.
@@ -1057,10 +1066,10 @@ Select all that apply.</help>
 		</optionsets>
 		<conditions/>
 	</question>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/creation_methods">
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/method">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>creation_methods</key>
-		<path>project/dataset/creation_methods</path>
+		<key>method</key>
+		<path>project/dataset/method</path>
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
@@ -1253,11 +1262,11 @@ Select all that apply.</help>
 		<view_text lang="de"/>
 		<additional_input>text</additional_input>
 	</option>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_Q4">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_q4">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>data_description_generated_Q4</uri_path>
+		<uri_path>data_description_generated_q4</uri_path>
 		<dc:comment/>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/method"/>
+		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/creation_methods"/>
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">Provide details on the instrument (brand/model), custom-built equipment, or computational code/software packages used.
@@ -1281,10 +1290,10 @@ Examples: Synchrotron beamline, Bruker D8 XRD, Thermo Scientific XPS, custom-bui
 		<optionsets/>
 		<conditions/>
 	</question>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/method">
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/creation_methods">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>method</key>
-		<path>project/dataset/method</path>
+		<key>creation_methods</key>
+		<path>project/dataset/creation_methods</path>
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
@@ -1316,7 +1325,7 @@ You can fill the information on this page for each dataset you have created in t
 			<questionset dc:uri="https://www.fairmat-nfdi.eu/questions/questionsets/data-formats" order="1"/>
 		</questionsets>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_Q6" order="0"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_q6" order="0"/>
 		</questions>
 		<conditions>
 			<condition dc:uri="https://www.fairmat-nfdi.eu/conditions/data_origin"/>
@@ -1344,7 +1353,7 @@ You can fill the information on this page for each dataset you have created in t
 			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data-formats/scientific-containers" order="4"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data-formats/simulations" order="5"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data-formats/non-simulation_formats_others" order="6"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_Q8" order="7"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_q8" order="7"/>
 		</questions>
 		<conditions/>
 	</questionset>
@@ -2150,11 +2159,11 @@ You can fill the information on this page for each dataset you have created in t
 		<optionsets/>
 		<conditions/>
 	</question>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_Q8">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_q8">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>data_description_generated_Q8</uri_path>
+		<uri_path>data_description_generated_q8</uri_path>
 		<dc:comment/>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/storage"/>
+		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/preservation/selection_format"/>
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">Use this field to justify your choice of the file format, especially if a properietary or vendor-specific format has been chosen. 
@@ -2184,16 +2193,23 @@ Explain why this file format is suitable for your data. Possible aspects to cons
 		<optionsets/>
 		<conditions/>
 	</question>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/storage">
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/preservation/selection_format">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>storage</key>
-		<path>project/dataset/storage</path>
+		<key>selection_format</key>
+		<path>project/preservation/selection_format</path>
 		<dc:comment/>
-		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
+		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/preservation"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_Q6">
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/preservation">
+		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
+		<key>preservation</key>
+		<path>project/preservation</path>
+		<dc:comment/>
+		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project"/>
+	</attribute>
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_q6">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>data_description_generated_Q6</uri_path>
+		<uri_path>data_description_generated_q6</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/size/volume"/>
 		<is_collection>False</is_collection>
@@ -2371,12 +2387,12 @@ Each dataset should be described individually. For every dataset, include the fo
 		<help lang="de"/>
 		<verbose_name lang="de"/>
 		<questionsets>
-			<questionset dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_source_information" order="3"/>
+			<questionset dc:uri="https://www.fairmat-nfdi.eu/questions/questionset/reused_source_information" order="3"/>
 		</questionsets>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/reused-data_Q1" order="0"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/reused-data_Q2" order="1"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_Q7" order="2"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q1" order="0"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q2" order="1"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q3" order="2"/>
 		</questions>
 		<conditions>
 			<condition dc:uri="https://www.fairmat-nfdi.eu/conditions/data_origin_2"/>
@@ -2399,9 +2415,9 @@ Each dataset should be described individually. For every dataset, include the fo
 		<target_text/>
 		<target_option dc:uri="https://www.fairmat-nfdi.eu/options/reuse"/>
 	</condition>
-	<questionset dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_source_information">
+	<questionset dc:uri="https://www.fairmat-nfdi.eu/questions/questionset/reused_source_information">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>data_description_reused_source_information</uri_path>
+		<uri_path>questionset/reused_source_information</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/reuse_existing"/>
 		<is_collection>False</is_collection>
@@ -2413,17 +2429,17 @@ Each dataset should be described individually. For every dataset, include the fo
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/reused_data_Q3" order="0"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/reused_data_Q4" order="3"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/reused_data_Q5" order="4"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/reused_data_Q6" order="5"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/reused_data_Q7" order="6"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q4" order="0"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q5" order="3"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q6" order="4"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q7" order="5"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q8" order="6"/>
 		</questions>
 		<conditions/>
 	</questionset>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/reused_data_Q3">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q4">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>reused_data_Q3</uri_path>
+		<uri_path>data_description_reused_q4</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://www.fairmat-nfdi.eu/domain/project/dataset/reuse_existing/source_type"/>
 		<is_collection>False</is_collection>
@@ -2571,9 +2587,9 @@ Each dataset should be described individually. For every dataset, include the fo
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/reused_data_Q4">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q5">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>reused_data_Q4</uri_path>
+		<uri_path>data_description_reused_q5</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://www.fairmat-nfdi.eu/domain/project/dataset/reuse_existing/source_name"/>
 		<is_collection>False</is_collection>
@@ -2605,9 +2621,9 @@ Each dataset should be described individually. For every dataset, include the fo
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/reuse_existing"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/reused_data_Q5">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q6">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>reused_data_Q5</uri_path>
+		<uri_path>data_description_reused_q6</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/pids"/>
 		<is_collection>False</is_collection>
@@ -2639,9 +2655,9 @@ Each dataset should be described individually. For every dataset, include the fo
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/reused_data_Q6">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q7">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>reused_data_Q6</uri_path>
+		<uri_path>data_description_reused_q7</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/data_security/access_permissions"/>
 		<is_collection>False</is_collection>
@@ -2680,9 +2696,9 @@ Each dataset should be described individually. For every dataset, include the fo
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/reused_data_Q7">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q8">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>reused_data_Q7</uri_path>
+		<uri_path>data_description_reused_q8</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/sharing/sharing_license"/>
 		<is_collection>False</is_collection>
@@ -2722,9 +2738,9 @@ Also verify that the selected license is compatible with the planned outputs of 
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/reused-data_Q1">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q1">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>reused-data_Q1</uri_path>
+		<uri_path>data_description_reused_q1</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/title"/>
 		<is_collection>False</is_collection>
@@ -2749,9 +2765,9 @@ Also verify that the selected license is compatible with the planned outputs of 
 		<optionsets/>
 		<conditions/>
 	</question>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/reused-data_Q2">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q2">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>reused-data_Q2</uri_path>
+		<uri_path>data_description_reused_q2</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/description"/>
 		<is_collection>False</is_collection>
@@ -2776,9 +2792,9 @@ Also verify that the selected license is compatible with the planned outputs of 
 		<optionsets/>
 		<conditions/>
 	</question>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_generated_Q7">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_description_reused_q3">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>data_description_generated_Q7</uri_path>
+		<uri_path>data_description_reused_q3</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/usage_description"/>
 		<is_collection>False</is_collection>
@@ -2845,16 +2861,16 @@ Each dataset should normally be described individually. If the same approach app
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_Q1" order="0"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_Q2" order="1"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_Q4" order="2"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_Q3" order="3"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_q1" order="0"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_q2" order="1"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_q4" order="2"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_q3" order="3"/>
 		</questions>
 		<conditions/>
 	</page>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_Q1">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_q1">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>documentation_Q1</uri_path>
+		<uri_path>documentation_q1</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/storage/naming_policy"/>
 		<is_collection>False</is_collection>
@@ -2886,9 +2902,16 @@ Each dataset should normally be described individually. If the same approach app
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/storage"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_Q2">
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/storage">
+		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
+		<key>storage</key>
+		<path>project/dataset/storage</path>
+		<dc:comment/>
+		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
+	</attribute>
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_q2">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>documentation_Q2</uri_path>
+		<uri_path>documentation_q2</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/metadata/standards"/>
 		<is_collection>False</is_collection>
@@ -2929,11 +2952,11 @@ Examples: *“NOMAD Metainfo schema for simulation outputs”, “NeXus/HDF5 for
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_Q4">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_q4">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>documentation_Q4</uri_path>
+		<uri_path>documentation_q4</uri_path>
 		<dc:comment/>
-		<attribute/>
+		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/provenance/content"/>
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">Please describe how the provenance of your data can be tracked (e.g., by linking raw and processed data, documenting workflows, and recording software versions and parameters). Consider how other researchers could reproduce your results: is this information documented in your ELN, included in the metadata, or provided as additional accompanying instructions or you have other solutions?</help>
@@ -2956,9 +2979,23 @@ Examples: *“NOMAD Metainfo schema for simulation outputs”, “NeXus/HDF5 for
 		<optionsets/>
 		<conditions/>
 	</question>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_Q3">
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/provenance/content">
+		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
+		<key>content</key>
+		<path>project/dataset/provenance/content</path>
+		<dc:comment/>
+		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/provenance"/>
+	</attribute>
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/provenance">
+		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
+		<key>provenance</key>
+		<path>project/dataset/provenance</path>
+		<dc:comment/>
+		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
+	</attribute>
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/documentation_q3">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>documentation_Q3</uri_path>
+		<uri_path>documentation_q3</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/metadata/creation"/>
 		<is_collection>True</is_collection>
@@ -3110,14 +3147,14 @@ Each dataset should normally be described individually. If identical quality ass
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_quality_Q1" order="1"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_quality_Q2" order="2"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_quality_q1" order="1"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_quality_q2" order="2"/>
 		</questions>
 		<conditions/>
 	</page>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_quality_Q1">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_quality_q1">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>data_quality_Q1</uri_path>
+		<uri_path>data_quality_q1</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/quality_assurance"/>
 		<is_collection>True</is_collection>
@@ -3310,11 +3347,11 @@ Each dataset should normally be described individually. If identical quality ass
 		<view_text lang="de"/>
 		<additional_input>textarea</additional_input>
 	</option>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_quality_Q2">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/data_quality_q2">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>data_quality_Q2</uri_path>
+		<uri_path>data_quality_q2</uri_path>
 		<dc:comment/>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/metadata/quality_assurance"/>
+		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/control_tool"/>
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">Indicate whether you will apply discipline-specific standards, facility QA protocols, or community guidelines to ensure reliable and comparable data. Mention relevant standards where applicable.</help>
@@ -3337,12 +3374,12 @@ Each dataset should normally be described individually. If identical quality ass
 		<optionsets/>
 		<conditions/>
 	</question>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/metadata/quality_assurance">
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/control_tool">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>quality_assurance</key>
-		<path>project/dataset/metadata/quality_assurance</path>
+		<key>control_tool</key>
+		<path>project/dataset/control_tool</path>
 		<dc:comment/>
-		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/metadata"/>
+		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
 	<section dc:uri="https://www.fairmat-nfdi.eu/questions/storage_backup">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
@@ -3354,13 +3391,13 @@ This section should deal with the short-term storage and archiving during the pr
 		<title lang="de"/>
 		<short_title lang="de"/>
 		<pages>
-			<page dc:uri="https://www.fairmat-nfdi.eu/questions/storage_backup_1" order="1"/>
-			<page dc:uri="https://www.fairmat-nfdi.eu/questions/storage_backup_2" order="2"/>
+			<page dc:uri="https://www.fairmat-nfdi.eu/questions/storage" order="1"/>
+			<page dc:uri="https://www.fairmat-nfdi.eu/questions/backup" order="2"/>
 		</pages>
 	</section>
-	<page dc:uri="https://www.fairmat-nfdi.eu/questions/storage_backup_1">
+	<page dc:uri="https://www.fairmat-nfdi.eu/questions/storage">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>storage_backup_1</uri_path>
+		<uri_path>storage</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/storage"/>
 		<is_collection>False</is_collection>
@@ -3374,15 +3411,15 @@ This section should deal with the short-term storage and archiving during the pr
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_Q1" order="1"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_backup_Q2" order="2"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_backup_Q3" order="3"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_q1" order="1"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_q2" order="2"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_q3" order="3"/>
 		</questions>
 		<conditions/>
 	</page>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_Q1">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_q1">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>storage_Q1</uri_path>
+		<uri_path>storage_q1</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/storage/type"/>
 		<is_collection>True</is_collection>
@@ -3423,21 +3460,21 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<dc:comment/>
 		<provider_key/>
 		<options>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_00" order="0"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_01" order="1"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_02" order="2"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_03" order="3"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_04" order="4"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_05" order="5"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_06" order="6"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_07" order="7"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_08" order="8"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_00" order="0"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_01" order="1"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_02" order="2"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_03" order="3"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_04" order="4"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_05" order="5"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_06" order="6"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_07" order="7"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_08" order="8"/>
 		</options>
 		<conditions/>
 	</optionset>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_00">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_00">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_00</uri_path>
+		<uri_path>dfg_storage/dfg-st_00</uri_path>
 		<dc:comment/>
 		<text lang="en">Facility's central storage and data management service</text>
 		<help lang="en"/>
@@ -3449,9 +3486,9 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input>text</additional_input>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_01">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_01">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_01</uri_path>
+		<uri_path>dfg_storage/dfg-st_01</uri_path>
 		<dc:comment/>
 		<text lang="en">Central cloud service of the facility</text>
 		<help lang="en"/>
@@ -3463,9 +3500,9 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input>text</additional_input>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_02">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_02">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_02</uri_path>
+		<uri_path>dfg_storage/dfg-st_02</uri_path>
 		<dc:comment/>
 		<text lang="en">GitHub/GitLab</text>
 		<help lang="en"/>
@@ -3477,9 +3514,9 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_03">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_03">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_03</uri_path>
+		<uri_path>dfg_storage/dfg-st_03</uri_path>
 		<dc:comment/>
 		<text lang="en">Other cloud solution</text>
 		<help lang="en"/>
@@ -3491,9 +3528,9 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input>text</additional_input>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_04">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_04">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_04</uri_path>
+		<uri_path>dfg_storage/dfg-st_04</uri_path>
 		<dc:comment/>
 		<text lang="en">Central solution (e.g. network disks and automatic data mirroring, use of the institution’s central server infrastructure, archiving of data on university servers, etc.)</text>
 		<help lang="en"/>
@@ -3505,9 +3542,9 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_05">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_05">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_05</uri_path>
+		<uri_path>dfg_storage/dfg-st_05</uri_path>
 		<dc:comment/>
 		<text lang="en">Decentralized solution (e.g. server in the institute or chair, etc.)</text>
 		<help lang="en"/>
@@ -3519,9 +3556,9 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_06">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_06">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_06</uri_path>
+		<uri_path>dfg_storage/dfg-st_06</uri_path>
 		<dc:comment/>
 		<text lang="en">Local computer</text>
 		<help lang="en"/>
@@ -3533,9 +3570,9 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_07">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_07">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_07</uri_path>
+		<uri_path>dfg_storage/dfg-st_07</uri_path>
 		<dc:comment/>
 		<text lang="en">external hard drives</text>
 		<help lang="en"/>
@@ -3547,9 +3584,9 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_08">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_08">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_08</uri_path>
+		<uri_path>dfg_storage/dfg-st_08</uri_path>
 		<dc:comment/>
 		<text lang="en">Other</text>
 		<help lang="en"/>
@@ -3561,9 +3598,9 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input>text</additional_input>
 	</option>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_backup_Q2">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_q2">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>storage_backup_Q2</uri_path>
+		<uri_path>storage_q2</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/storage/organisation_policy"/>
 		<is_collection>False</is_collection>
@@ -3596,9 +3633,9 @@ Examples: “Folders structured by experiment date (YYYY-MM-DD) and sample ID”
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/storage"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_backup_Q3">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_q3">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>storage_backup_Q3</uri_path>
+		<uri_path>storage_q3</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/data_security/access_permissions"/>
 		<is_collection>False</is_collection>
@@ -3623,9 +3660,9 @@ Examples: “Folders structured by experiment date (YYYY-MM-DD) and sample ID”
 		<optionsets/>
 		<conditions/>
 	</question>
-	<page dc:uri="https://www.fairmat-nfdi.eu/questions/storage_backup_2">
+	<page dc:uri="https://www.fairmat-nfdi.eu/questions/backup">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>storage_backup_2</uri_path>
+		<uri_path>backup</uri_path>
 		<dc:comment/>
 		<attribute/>
 		<is_collection>False</is_collection>
@@ -3639,14 +3676,14 @@ Examples: “Folders structured by experiment date (YYYY-MM-DD) and sample ID”
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_backup_Q4" order="1"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_backup_Q7" order="4"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/backup_q1" order="1"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/backup_q2" order="4"/>
 		</questions>
 		<conditions/>
 	</page>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_backup_Q4">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/backup_q1">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>storage_backup_Q4</uri_path>
+		<uri_path>backup_q1</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/data_security/backups"/>
 		<is_collection>False</is_collection>
@@ -3688,9 +3725,9 @@ Examples: “Daily incremental backups and weekly full backups on the university
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/data_security"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/storage_backup_Q7">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/backup_q2">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>storage_backup_Q7</uri_path>
+		<uri_path>backup_q2</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/data_security/security_measures"/>
 		<is_collection>True</is_collection>
@@ -3912,16 +3949,16 @@ Examples: “Daily incremental backups and weekly full backups on the university
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_Q1" order="0"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_Q4" order="1"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_Q2" order="2"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_Q3" order="3"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_q1" order="0"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_q2" order="1"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_q3" order="2"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_q4" order="3"/>
 		</questions>
 		<conditions/>
 	</page>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_Q1">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_q1">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>dissemination_Q1</uri_path>
+		<uri_path>dissemination_q1</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/reuse_scenario"/>
 		<is_collection>False</is_collection>
@@ -3955,9 +3992,9 @@ Examples: “Daily incremental backups and weekly full backups on the university
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_Q4">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_q2">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>dissemination_Q4</uri_path>
+		<uri_path>dissemination_q2</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/data_publication_date"/>
 		<is_collection>False</is_collection>
@@ -3994,11 +4031,11 @@ The importance of data publication is underscored once again by the
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_Q2">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_q3">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>dissemination_Q2</uri_path>
+		<uri_path>dissemination_q3</uri_path>
 		<dc:comment/>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/sharing/explanation"/>
+		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/sharing/repository"/>
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">Describe the repositories, infrastructures, or platforms where your data will be shared. Choose trustworthy repositories that provide persistent identifiers and community recognition (e.g., NOMAD for materials science, Zenodo, institutional repositories). You may also list complementary dissemination channels (journal supplementary material, project website).
@@ -4023,16 +4060,16 @@ The importance of data publication is underscored once again by the
 		<optionsets/>
 		<conditions/>
 	</question>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/sharing/explanation">
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/sharing/repository">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>explanation</key>
-		<path>project/dataset/sharing/explanation</path>
-		<dc:comment/>
+		<key>repository</key>
+		<path>project/dataset/sharing/repository</path>
+		<dc:comment>Refers to the place of publication, which must be distinguished from the place of storaging and archiving (see https://github.com/rdmorganiser/rdmo-catalog/issues/55)</dc:comment>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/sharing"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_Q3">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/dissemination_q4">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>dissemination_Q3</uri_path>
+		<uri_path>dissemination_q4</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/sharing/conditions"/>
 		<is_collection>True</is_collection>
@@ -4274,17 +4311,17 @@ https://www.gnu.org/licenses/lgpl-3.0.en.html</dc:comment>
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_Q1" order="1"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_Q2" order="2"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_Q3" order="3"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_Q4" order="4"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_Q5" order="5"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_q1" order="1"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_q2" order="2"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_q3" order="3"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_q4" order="4"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_q5" order="5"/>
 		</questions>
 		<conditions/>
 	</page>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_Q1">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_q1">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>preservation_Q1</uri_path>
+		<uri_path>preservation_q1</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/preservation/selection_criteria"/>
 		<is_collection>False</is_collection>
@@ -4318,16 +4355,9 @@ https://www.gnu.org/licenses/lgpl-3.0.en.html</dc:comment>
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/preservation"/>
 	</attribute>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/preservation">
-		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>preservation</key>
-		<path>project/preservation</path>
-		<dc:comment/>
-		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project"/>
-	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_Q2">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_q2">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>preservation_Q2</uri_path>
+		<uri_path>preservation_q2</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/preservation/repository"/>
 		<is_collection>False</is_collection>
@@ -4368,9 +4398,9 @@ https://www.gnu.org/licenses/lgpl-3.0.en.html</dc:comment>
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_Q3">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_q3">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>preservation_Q3</uri_path>
+		<uri_path>preservation_q3</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/preservation/duration"/>
 		<is_collection>False</is_collection>
@@ -4402,9 +4432,9 @@ https://www.gnu.org/licenses/lgpl-3.0.en.html</dc:comment>
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/preservation"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_Q4">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_q4">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>preservation_Q4</uri_path>
+		<uri_path>preservation_q4</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/pids/resolver"/>
 		<is_collection>False</is_collection>
@@ -4438,9 +4468,9 @@ https://www.gnu.org/licenses/lgpl-3.0.en.html</dc:comment>
 		<dc:comment>Added for the question &quot;Will the repository resolve the identifier to a digital object?&quot;, required in the Horizon Europe Data Management Plan Template, 05.05.2021, https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/temp-form/report/data-management-plan-template_he_en.docx</dc:comment>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/pids"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_Q5">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/preservation_q5">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>preservation_Q5</uri_path>
+		<uri_path>preservation_q5</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/preservation/trusted"/>
 		<is_collection>False</is_collection>
@@ -4502,15 +4532,15 @@ https://www.gnu.org/licenses/lgpl-3.0.en.html</dc:comment>
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_ethical_data_Q1" order="0"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_ethical_data_Q2" order="1"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_ethical_data_Q3" order="2"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_ethical_data_q1" order="0"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_ethical_data_q2" order="1"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_ethical_data_q3" order="2"/>
 		</questions>
 		<conditions/>
 	</page>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_ethical_data_Q1">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_ethical_data_q1">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>legal_ethical_data_Q1</uri_path>
+		<uri_path>legal_ethical_data_q1</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/legal_aspects"/>
 		<is_collection>False</is_collection>
@@ -4535,9 +4565,9 @@ https://www.gnu.org/licenses/lgpl-3.0.en.html</dc:comment>
 		<optionsets/>
 		<conditions/>
 	</question>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_ethical_data_Q2">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_ethical_data_q2">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>legal_ethical_data_Q2</uri_path>
+		<uri_path>legal_ethical_data_q2</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/ipr"/>
 		<is_collection>False</is_collection>
@@ -4576,9 +4606,9 @@ Example:
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_ethical_data_Q3">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/legal_ethical_data_q3">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>legal_ethical_data_Q3</uri_path>
+		<uri_path>legal_ethical_data_q3</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/sharing/restrictions_explanation"/>
 		<is_collection>True</is_collection>
@@ -4706,13 +4736,13 @@ Please keep in mind that the data can be published after a certain blocking or e
 		<title lang="de"/>
 		<short_title lang="de"/>
 		<pages>
-			<page dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp" order="1"/>
-			<page dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resources" order="3"/>
+			<page dc:uri="https://www.fairmat-nfdi.eu/questions/resp" order="1"/>
+			<page dc:uri="https://www.fairmat-nfdi.eu/questions/resources" order="3"/>
 		</pages>
 	</section>
-	<page dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp">
+	<page dc:uri="https://www.fairmat-nfdi.eu/questions/resp">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resp</uri_path>
+		<uri_path>resp</uri_path>
 		<dc:comment/>
 		<attribute/>
 		<is_collection>False</is_collection>
@@ -4728,17 +4758,17 @@ Define who is responsible for research data management (RDM) in your project. Th
 		<help lang="de"/>
 		<verbose_name lang="de"/>
 		<questionsets>
-			<questionset dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_tasks" order="2"/>
+			<questionset dc:uri="https://www.fairmat-nfdi.eu/questions/questionset/resp_tasks" order="2"/>
 		</questionsets>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_Q1" order="0"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_Q5" order="1"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_q1" order="0"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_q2" order="1"/>
 		</questions>
 		<conditions/>
 	</page>
-	<questionset dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_tasks">
+	<questionset dc:uri="https://www.fairmat-nfdi.eu/questions/questionset/resp_tasks">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resp_tasks</uri_path>
+		<uri_path>questionset/resp_tasks</uri_path>
 		<dc:comment/>
 		<attribute/>
 		<is_collection>False</is_collection>
@@ -4750,17 +4780,17 @@ Define who is responsible for research data management (RDM) in your project. Th
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_tasks_Q7" order="0"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_Q2" order="1"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_Q3" order="2"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_Q4" order="3"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_Q6" order="4"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_tasks_q1" order="0"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_tasks_q2" order="1"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_tasks_q3" order="2"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_tasks_q4" order="3"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_tasks_q5" order="4"/>
 		</questions>
 		<conditions/>
 	</questionset>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_tasks_Q7">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_tasks_q1">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resp_tasks_Q7</uri_path>
+		<uri_path>resp_tasks_q1</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/curation/responsible_person/name"/>
 		<is_collection>True</is_collection>
@@ -4806,9 +4836,9 @@ Define who is responsible for research data management (RDM) in your project. Th
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_Q2">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_tasks_q2">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resp_Q2</uri_path>
+		<uri_path>resp_tasks_q2</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/metadata/responsible_person/name"/>
 		<is_collection>True</is_collection>
@@ -4847,9 +4877,9 @@ Define who is responsible for research data management (RDM) in your project. Th
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/metadata"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_Q3">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_tasks_q3">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resp_Q3</uri_path>
+		<uri_path>resp_tasks_q3</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/data_security/backup_responsible/name"/>
 		<is_collection>True</is_collection>
@@ -4888,9 +4918,9 @@ Define who is responsible for research data management (RDM) in your project. Th
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/data_security"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_Q4">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_tasks_q4">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resp_Q4</uri_path>
+		<uri_path>resp_tasks_q4</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/pids/responsible_person/name"/>
 		<is_collection>True</is_collection>
@@ -4929,11 +4959,11 @@ Define who is responsible for research data management (RDM) in your project. Th
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/pids"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_Q6">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_tasks_q5">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resp_Q6</uri_path>
+		<uri_path>resp_tasks_q5</uri_path>
 		<dc:comment/>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/preservation/responsible_person"/>
+		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/preservation/responsible_person/name"/>
 		<is_collection>True</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en"/>
@@ -4956,6 +4986,13 @@ Define who is responsible for research data management (RDM) in your project. Th
 		<optionsets/>
 		<conditions/>
 	</question>
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/preservation/responsible_person/name">
+		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
+		<key>name</key>
+		<path>project/dataset/preservation/responsible_person/name</path>
+		<dc:comment>Refers to the permanent project owner: see https://github.com/rdmorganiser/rdmo-catalog/issues/110</dc:comment>
+		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/preservation/responsible_person"/>
+	</attribute>
 	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/preservation/responsible_person">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
 		<key>responsible_person</key>
@@ -4963,9 +5000,9 @@ Define who is responsible for research data management (RDM) in your project. Th
 		<dc:comment>Refers to the permanent project owner: see https://github.com/rdmorganiser/rdmo-catalog/issues/110</dc:comment>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/preservation"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_Q1">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_q1">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resp_Q1</uri_path>
+		<uri_path>resp_q1</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/data_management/name"/>
 		<is_collection>False</is_collection>
@@ -5004,9 +5041,9 @@ Define who is responsible for research data management (RDM) in your project. Th
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resp_Q5">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_q2">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resp_Q5</uri_path>
+		<uri_path>resp_q2</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/preservation/responsible_person/name"/>
 		<is_collection>True</is_collection>
@@ -5045,9 +5082,9 @@ Define who is responsible for research data management (RDM) in your project. Th
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/preservation"/>
 	</attribute>
-	<page dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resources">
+	<page dc:uri="https://www.fairmat-nfdi.eu/questions/resources">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resources</uri_path>
+		<uri_path>resources</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/costs"/>
 		<is_collection>False</is_collection>
@@ -5073,9 +5110,9 @@ DFG allows you to request project-specific costs for data preparation, documenta
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resources_Q1" order="1"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resources_Q2" order="2"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resources_Q3" order="3"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resources_q1" order="1"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resources_q2" order="2"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/questions/resources_q3" order="3"/>
 		</questions>
 		<conditions/>
 	</page>
@@ -5086,9 +5123,9 @@ DFG allows you to request project-specific costs for data preparation, documenta
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resources_Q1">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resources_q1">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resources_Q1</uri_path>
+		<uri_path>resources_q1</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/costs/creation/personnel"/>
 		<is_collection>False</is_collection>
@@ -5127,9 +5164,9 @@ DFG allows you to request project-specific costs for data preparation, documenta
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/costs"/>
 	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resources_Q2">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resources_q2">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resources_Q2</uri_path>
+		<uri_path>resources_q2</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/costs/creation/non_personnel"/>
 		<is_collection>True</is_collection>
@@ -5247,9 +5284,9 @@ DFG allows you to request project-specific costs for data preparation, documenta
 		<view_text lang="de"/>
 		<additional_input>textarea</additional_input>
 	</option>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resp_resources_resources_Q3">
+	<question dc:uri="https://www.fairmat-nfdi.eu/questions/resources_q3">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>resp_resources_resources_Q3</uri_path>
+		<uri_path>resources_q3</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/support/costs"/>
 		<is_collection>False</is_collection>
