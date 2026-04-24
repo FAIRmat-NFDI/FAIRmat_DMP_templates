@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/" created="2025-11-14T17:33:19.496320+01:00" required="2.1.0" version="2.3.2">
+<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/" created="2026-04-24T11:43:19.989479+02:00" required="2.1.0" version="2.4.0">
 	<catalog dc:uri="https://www.fairmat-nfdi.eu/questions/FAIRmat_DFG">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
 		<uri_path>FAIRmat_DFG</uri_path>
@@ -60,7 +60,6 @@ Choose this catalog when preparing a DFG proposal or managing research data with
 			<question dc:uri="https://www.fairmat-nfdi.eu/questions/project_acronym" order="1"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/questions/project_start" order="2"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/questions/project_end" order="3"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/dmp_authors_name" order="4"/>
 		</questions>
 		<conditions/>
 	</page>
@@ -78,7 +77,6 @@ Choose this catalog when preparing a DFG proposal or managing research data with
 		<verbose_name lang="de"/>
 		<questionsets/>
 		<questions>
-			<question dc:uri="https://www.fairmat-nfdi.eu/questions/date" order="0"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/questions/dmp_version" order="1"/>
 		</questions>
 		<conditions/>
@@ -96,40 +94,6 @@ Choose this catalog when preparing a DFG proposal or managing research data with
 		<path>project</path>
 		<dc:comment/>
 		<parent/>
-	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/date">
-		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>date</uri_path>
-		<dc:comment/>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dmp/dmp_date"/>
-		<is_collection>False</is_collection>
-		<is_optional>False</is_optional>
-		<help lang="en">The date of creating the data management plan</help>
-		<text lang="en">Date</text>
-		<default_text lang="en"/>
-		<verbose_name lang="en"/>
-		<help lang="de"/>
-		<text lang="de"/>
-		<default_text lang="de"/>
-		<verbose_name lang="de"/>
-		<default_option/>
-		<default_external_id/>
-		<widget_type>date</widget_type>
-		<value_type>datetime</value_type>
-		<maximum/>
-		<minimum/>
-		<step/>
-		<unit/>
-		<width/>
-		<optionsets/>
-		<conditions/>
-	</question>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dmp/dmp_date">
-		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>dmp_date</key>
-		<path>project/dmp/dmp_date</path>
-		<dc:comment>Date of this data management plan version, added for the text field &quot;Date&quot;, required in the Horizon Europe Data Management Plan Template, 05.05.2021, https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/temp-form/report/data-management-plan-template_he_en.docx</dc:comment>
-		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dmp"/>
 	</attribute>
 	<question dc:uri="https://www.fairmat-nfdi.eu/questions/dmp_version">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
@@ -307,50 +271,6 @@ Choose this catalog when preparing a DFG proposal or managing research data with
 		<path>project/schedule/project_end</path>
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/schedule"/>
-	</attribute>
-	<question dc:uri="https://www.fairmat-nfdi.eu/questions/dmp_authors_name">
-		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
-		<uri_path>dmp_authors_name</uri_path>
-		<dc:comment/>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/coordination/name"/>
-		<is_collection>True</is_collection>
-		<is_optional>False</is_optional>
-		<help lang="en">Indicate the persons or institutions that are responsible for coordinating the overall project. This usually includes the principal investigator (PI), project leader, or a coordinating institution. 
-Provide full details such as name, affiliation, role, and contact information. 
-
-If the project is part of a consortium, specify the central coordination office or lead partner. This information ensures clarity on who oversees the project and serves as the primary contact point for funders, partners, and data management responsibilities.</help>
-		<text lang="en">Persons or institutions responsible for the project coordination</text>
-		<default_text lang="en"/>
-		<verbose_name lang="en"/>
-		<help lang="de"/>
-		<text lang="de"/>
-		<default_text lang="de"/>
-		<verbose_name lang="de"/>
-		<default_option/>
-		<default_external_id/>
-		<widget_type>text</widget_type>
-		<value_type>text</value_type>
-		<maximum/>
-		<minimum/>
-		<step/>
-		<unit/>
-		<width/>
-		<optionsets/>
-		<conditions/>
-	</question>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/coordination/name">
-		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>name</key>
-		<path>project/coordination/name</path>
-		<dc:comment/>
-		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/coordination"/>
-	</attribute>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/coordination">
-		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>coordination</key>
-		<path>project/coordination</path>
-		<dc:comment/>
-		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project"/>
 	</attribute>
 	<page dc:uri="https://www.fairmat-nfdi.eu/questions/research_description">
 		<uri_prefix>https://www.fairmat-nfdi.eu</uri_prefix>
@@ -3182,7 +3102,7 @@ Each dataset should normally be described individually. If identical quality ass
 		<help lang="de"/>
 		<default_text lang="de"/>
 		<view_text lang="de"/>
-		<additional_input/>
+		<additional_input>text</additional_input>
 	</option>
 	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_dataset_quality/dfg-dsq_01">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
@@ -3196,7 +3116,7 @@ Each dataset should normally be described individually. If identical quality ass
 		<help lang="de"/>
 		<default_text lang="de"/>
 		<view_text lang="de"/>
-		<additional_input/>
+		<additional_input>text</additional_input>
 	</option>
 	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_dataset_quality/dfg-dsq_03">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
@@ -3210,7 +3130,7 @@ Each dataset should normally be described individually. If identical quality ass
 		<help lang="de"/>
 		<default_text lang="de"/>
 		<view_text lang="de"/>
-		<additional_input/>
+		<additional_input>text</additional_input>
 	</option>
 	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_dataset_quality/dfg-dsq_04">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
@@ -3224,7 +3144,7 @@ Each dataset should normally be described individually. If identical quality ass
 		<help lang="de"/>
 		<default_text lang="de"/>
 		<view_text lang="de"/>
-		<additional_input/>
+		<additional_input>text</additional_input>
 	</option>
 	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_dataset_quality/dfg-dsq_05">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
@@ -3238,7 +3158,7 @@ Each dataset should normally be described individually. If identical quality ass
 		<help lang="de"/>
 		<default_text lang="de"/>
 		<view_text lang="de"/>
-		<additional_input/>
+		<additional_input>text</additional_input>
 	</option>
 	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_dataset_quality/dfg-dsq_06">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
@@ -3423,21 +3343,21 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<dc:comment/>
 		<provider_key/>
 		<options>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_00" order="0"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_01" order="1"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_02" order="2"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_03" order="3"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_04" order="4"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_05" order="5"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_06" order="6"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_07" order="7"/>
-			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_08" order="8"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_00" order="0"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_01" order="1"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_02" order="2"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_03" order="3"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_04" order="4"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_05" order="5"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_06" order="6"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_07" order="7"/>
+			<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_08" order="8"/>
 		</options>
 		<conditions/>
 	</optionset>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_00">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_00">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_00</uri_path>
+		<uri_path>dfg_storage/dfg-st_00</uri_path>
 		<dc:comment/>
 		<text lang="en">Facility's central storage and data management service</text>
 		<help lang="en"/>
@@ -3449,9 +3369,9 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input>text</additional_input>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_01">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_01">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_01</uri_path>
+		<uri_path>dfg_storage/dfg-st_01</uri_path>
 		<dc:comment/>
 		<text lang="en">Central cloud service of the facility</text>
 		<help lang="en"/>
@@ -3463,9 +3383,9 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input>text</additional_input>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_02">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_02">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_02</uri_path>
+		<uri_path>dfg_storage/dfg-st_02</uri_path>
 		<dc:comment/>
 		<text lang="en">GitHub/GitLab</text>
 		<help lang="en"/>
@@ -3477,9 +3397,9 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_03">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_03">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_03</uri_path>
+		<uri_path>dfg_storage/dfg-st_03</uri_path>
 		<dc:comment/>
 		<text lang="en">Other cloud solution</text>
 		<help lang="en"/>
@@ -3491,23 +3411,23 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input>text</additional_input>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_04">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_04">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_04</uri_path>
+		<uri_path>dfg_storage/dfg-st_04</uri_path>
 		<dc:comment/>
 		<text lang="en">Central solution (e.g. network disks and automatic data mirroring, use of the institution’s central server infrastructure, archiving of data on university servers, etc.)</text>
 		<help lang="en"/>
 		<default_text lang="en"/>
 		<view_text lang="en"/>
-		<text lang="de">Zentrale Lösung (z. B. Netzwerkplatten und automatische Datenspiegelung, Nutzung zentraler Serverinfrastruktur der Einrichtung, Archivierung der Daten auf Hochschulservern, usw.)</text>
+		<text lang="de">Zentrale Lösung (z. B. Netzwerkplatten und automatische Datenspiegelung, Nutzung zentraler Serverinfrastruktur der Einrichtung, Archivierung der Daten auf Hochschulservern, etc.)</text>
 		<help lang="de"/>
 		<default_text lang="de"/>
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_05">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_05">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_05</uri_path>
+		<uri_path>dfg_storage/dfg-st_05</uri_path>
 		<dc:comment/>
 		<text lang="en">Decentralized solution (e.g. server in the institute or chair, etc.)</text>
 		<help lang="en"/>
@@ -3519,9 +3439,9 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_06">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_06">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_06</uri_path>
+		<uri_path>dfg_storage/dfg-st_06</uri_path>
 		<dc:comment/>
 		<text lang="en">Local computer</text>
 		<help lang="en"/>
@@ -3533,9 +3453,9 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_07">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_07">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_07</uri_path>
+		<uri_path>dfg_storage/dfg-st_07</uri_path>
 		<dc:comment/>
 		<text lang="en">external hard drives</text>
 		<help lang="en"/>
@@ -3547,9 +3467,9 @@ Examples: “Institutional HPC storage at ZIH”, “Departmental NAS with acces
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage_FAIRmat/dfg-st_08">
+	<option dc:uri="https://rdmorganiser.github.io/terms/options/dfg_storage/dfg-st_08">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<uri_path>dfg_storage_FAIRmat/dfg-st_08</uri_path>
+		<uri_path>dfg_storage/dfg-st_08</uri_path>
 		<dc:comment/>
 		<text lang="en">Other</text>
 		<help lang="en"/>
