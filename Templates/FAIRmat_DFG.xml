@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/" created="2026-04-24T11:42:42.411727+02:00" required="2.1.0" version="2.3.2">
+<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/" created="2026-05-08T14:27:12.334324+02:00" required="2.1.0" version="2.3.2">
 	<catalog dc:uri="https://www.fairmat-nfdi.eu/terms/questions/FAIRmat_DFG">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
 		<uri_path>FAIRmat_DFG</uri_path>
@@ -12,7 +12,7 @@ By using this catalog, you can ensure that your project complies with DFG guidel
 
 Choose this catalog when preparing a DFG proposal or managing research data within a project in condensed matter physics or materials science.</help>
 		<title lang="de">FAIRmat_DFG Datenmanagementplan (Festkörperphysik &amp; Materialwissenschaften)</title>
-		<help lang="de">Dieses Katalog stellt eine strukturierte Vorlage für einen Datenmanagementplan (DMP) gemäß den Anforderungen der Deutschen Forschungsgemeinschaft (DFG) dar. Er ist speziell auf die Bedürfnisse der Gemeinschaft der Festkörperphysik und Materialwissenschaften zugeschnitten.</help>
+		<help lang="de">Dieser Katalog stellt eine strukturierte Vorlage für einen Datenmanagementplan (DMP) gemäß den Anforderungen der Deutschen Forschungsgemeinschaft (DFG) dar. Er ist speziell auf die Bedürfnisse der Gemeinschaft der Festkörperphysik und Materialwissenschaften zugeschnitten.</help>
 		<sections>
 			<section dc:uri="https://www.fairmat-nfdi.eu/terms/questions/intro" order="0"/>
 			<section dc:uri="https://www.fairmat-nfdi.eu/terms/questions/data_description" order="1"/>
@@ -26,7 +26,7 @@ Choose this catalog when preparing a DFG proposal or managing research data with
 	<section dc:uri="https://www.fairmat-nfdi.eu/terms/questions/intro">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
 		<uri_path>intro</uri_path>
-		<dc:comment>This sections allows the researcher to fill in project information and provides a free text field to provide an introduction to your DMP.</dc:comment>
+		<dc:comment>This section allows the researcher to fill in project information and provides a free text field to provide an introduction to your DMP.</dc:comment>
 		<title lang="en">General Information</title>
 		<short_title lang="en"/>
 		<title lang="de"/>
@@ -41,7 +41,7 @@ Choose this catalog when preparing a DFG proposal or managing research data with
 	<page dc:uri="https://www.fairmat-nfdi.eu/terms/questions/general_information">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
 		<uri_path>general_information</uri_path>
-		<dc:comment>On this page you can provide basic about the project and the data management plan, in addtion an introduction. The text should summarize the scientific objectives of the project and briefly describe the type of data that will be generated or reused.</dc:comment>
+		<dc:comment>On this page you can provide basic information about the project and the data management plan, in addition, an introduction. The text should summarize the scientific objectives of the project and briefly describe the type of data that will be generated or reused.</dc:comment>
 		<attribute/>
 		<is_collection>False</is_collection>
 		<title lang="en">General Project Information</title>
@@ -449,6 +449,7 @@ For example, you can use the introduction to:
 			<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/legal_project_Q1" order="1"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/legal_project_Q2" order="2"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/legal_project_Q4" order="4"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/legal_project_Q4_details" order="5"/>
 		</questions>
 		<conditions/>
 	</page>
@@ -630,8 +631,8 @@ Examples: the DFG Code of Conduct (Guidelines for Safeguarding Good Research Pra
 		<verbose_name lang="de"/>
 		<default_option/>
 		<default_external_id/>
-		<widget_type>text</widget_type>
-		<value_type>text</value_type>
+		<widget_type>yesno</widget_type>
+		<value_type>boolean</value_type>
 		<maximum/>
 		<minimum/>
 		<step/>
@@ -654,11 +655,56 @@ Examples: the DFG Code of Conduct (Guidelines for Safeguarding Good Research Pra
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project"/>
 	</attribute>
+	<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/legal_project_Q4_details">
+		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
+		<uri_path>legal_project_Q4_details</uri_path>
+		<dc:comment/>
+		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/additional_rdm_policy/requirements"/>
+		<is_collection>False</is_collection>
+		<is_optional>True</is_optional>
+		<help lang="en">Examples: DFG Code of Conduct, laboratory safety rules, community standards, institutional data policies, or non-disclosure agreements.</help>
+		<text lang="en">Please specify the relevant research codes, professional standards, or subject-specific rules.</text>
+		<default_text lang="en"/>
+		<verbose_name lang="en"/>
+		<help lang="de"/>
+		<text lang="de"/>
+		<default_text lang="de"/>
+		<verbose_name lang="de"/>
+		<default_option/>
+		<default_external_id/>
+		<widget_type>textarea</widget_type>
+		<value_type>text</value_type>
+		<maximum/>
+		<minimum/>
+		<step/>
+		<unit/>
+		<width/>
+		<optionsets/>
+		<conditions>
+			<condition dc:uri="https://www.fairmat-nfdi.eu/terms/conditions/legal_project_Q4_yes"/>
+		</conditions>
+	</question>
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/additional_rdm_policy/requirements">
+		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
+		<key>requirements</key>
+		<path>project/additional_rdm_policy/requirements</path>
+		<dc:comment/>
+		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/additional_rdm_policy"/>
+	</attribute>
+	<condition dc:uri="https://www.fairmat-nfdi.eu/terms/conditions/legal_project_Q4_yes">
+		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
+		<uri_path>legal_project_Q4_yes</uri_path>
+		<dc:comment/>
+		<source dc:uri="https://rdmorganiser.github.io/terms/domain/project/additional_rdm_policy/yesno"/>
+		<relation>eq</relation>
+		<target_text>1</target_text>
+		<target_option/>
+	</condition>
 	<section dc:uri="https://www.fairmat-nfdi.eu/terms/questions/data_description">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
 		<uri_path>data_description</uri_path>
 		<dc:comment>Before any management plan can be created, what needs to be managed should be clearly defined. In this section, provide a comprehensive description of the data that will be either generated by the proposed project or reused from another source. By doing this, researchers can ensure that they have a clear understanding of the data types and sources, allowing for effective management and organization of the data throughout the research process.</dc:comment>
-		<title lang="en">Data description</title>
+		<title lang="en">Data Description</title>
 		<short_title lang="en">Data Description</short_title>
 		<title lang="de"/>
 		<short_title lang="de"/>
@@ -903,7 +949,7 @@ You can create several datasets in this section to cover the different types of 
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/description"/>
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
-		<help lang="en">Provide a brief description of the dataset, including its content, purpose, and context. Give a consice explanation on why the collection of this data is need, from which material system or source it is collected, and how it will be created and what it contains. (e.g., “Raw Raman spectra of Ni-rich layered oxides collected during electrochemical cycling,” “TEM images used for defect analysis of perovskite films”)</help>
+		<help lang="en">Provide a brief description of the dataset, including its content, purpose, and context. Give a concise explanation on why the collection of this data is needed, from which material system or source it is collected, and how it will be created and what it contains. (e.g., “Raw Raman spectra of Ni-rich layered oxides collected during electrochemical cycling,” “TEM images used for defect analysis of perovskite films”)</help>
 		<text lang="en">Dataset description:</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
@@ -990,24 +1036,24 @@ Select all that apply.</help>
 		<dc:comment/>
 		<provider_key/>
 		<options>
-			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_1" order="0"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_2" order="1"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_3" order="2"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_4" order="3"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_5" order="4"/>
+			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_1" order="0"/>
+			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_2" order="1"/>
+			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_3" order="2"/>
+			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_4" order="3"/>
+			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_5" order="4"/>
 			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_creation_method_12" order="5"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_10" order="6"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_6" order="7"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_7" order="8"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_8" order="9"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_9" order="10"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_11" order="11"/>
+			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_10" order="6"/>
+			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_6" order="7"/>
+			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_7" order="8"/>
+			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_8" order="9"/>
+			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_9" order="10"/>
+			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_11" order="11"/>
 		</options>
 		<conditions/>
 	</optionset>
-	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_1">
+	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_1">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
-		<uri_path>dataset_strucutre_1</uri_path>
+		<uri_path>dataset_structure_1</uri_path>
 		<dc:comment/>
 		<text lang="en">raw measurements</text>
 		<help lang="en"/>
@@ -1019,9 +1065,9 @@ Select all that apply.</help>
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_2">
+	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_2">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
-		<uri_path>dataset_strucutre_2</uri_path>
+		<uri_path>dataset_structure_2</uri_path>
 		<dc:comment/>
 		<text lang="en">processed data</text>
 		<help lang="en"/>
@@ -1033,9 +1079,9 @@ Select all that apply.</help>
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_3">
+	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_3">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
-		<uri_path>dataset_strucutre_3</uri_path>
+		<uri_path>dataset_structure_3</uri_path>
 		<dc:comment/>
 		<text lang="en">Analyzed data</text>
 		<help lang="en"/>
@@ -1047,9 +1093,9 @@ Select all that apply.</help>
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_4">
+	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_4">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
-		<uri_path>dataset_strucutre_4</uri_path>
+		<uri_path>dataset_structure_4</uri_path>
 		<dc:comment/>
 		<text lang="en">Simulation inputs</text>
 		<help lang="en"/>
@@ -1061,9 +1107,9 @@ Select all that apply.</help>
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_5">
+	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_5">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
-		<uri_path>dataset_strucutre_5</uri_path>
+		<uri_path>dataset_structure_5</uri_path>
 		<dc:comment/>
 		<text lang="en">Simulation outputs</text>
 		<help lang="en"/>
@@ -1089,9 +1135,9 @@ Select all that apply.</help>
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_10">
+	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_10">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
-		<uri_path>dataset_strucutre_10</uri_path>
+		<uri_path>dataset_structure_10</uri_path>
 		<dc:comment/>
 		<text lang="en">Spectroscopic maps</text>
 		<help lang="en"/>
@@ -1103,9 +1149,9 @@ Select all that apply.</help>
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_6">
+	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_6">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
-		<uri_path>dataset_strucutre_6</uri_path>
+		<uri_path>dataset_structure_6</uri_path>
 		<dc:comment/>
 		<text lang="en">Microscopic images</text>
 		<help lang="en"/>
@@ -1117,9 +1163,9 @@ Select all that apply.</help>
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_7">
+	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_7">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
-		<uri_path>dataset_strucutre_7</uri_path>
+		<uri_path>dataset_structure_7</uri_path>
 		<dc:comment/>
 		<text lang="en">Spectra</text>
 		<help lang="en"/>
@@ -1131,9 +1177,9 @@ Select all that apply.</help>
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_8">
+	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_8">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
-		<uri_path>dataset_strucutre_8</uri_path>
+		<uri_path>dataset_structure_8</uri_path>
 		<dc:comment/>
 		<text lang="en">Synthesis logs</text>
 		<help lang="en"/>
@@ -1145,9 +1191,9 @@ Select all that apply.</help>
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_9">
+	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_9">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
-		<uri_path>dataset_strucutre_9</uri_path>
+		<uri_path>dataset_structure_9</uri_path>
 		<dc:comment/>
 		<text lang="en">experimental protocols</text>
 		<help lang="en"/>
@@ -1159,11 +1205,11 @@ Select all that apply.</help>
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_strucutre_11">
+	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/dataset_structure_11">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
-		<uri_path>dataset_strucutre_11</uri_path>
+		<uri_path>dataset_structure_11</uri_path>
 		<dc:comment/>
-		<text lang="en">Others (please specifiy)</text>
+		<text lang="en">Other (please specify)</text>
 		<help lang="en"/>
 		<default_text lang="en"/>
 		<view_text lang="en"/>
@@ -1263,8 +1309,8 @@ You can fill the information on this page for each dataset you have created in t
 			<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/data-formats/spectroscopy" order="3"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/data-formats/scientific-containers" order="4"/>
 			<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/data-formats/simulations" order="5"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/data-formats/non-simulation_formats_others" order="6"/>
-			<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/data_description_generated_Q8" order="7"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/data-formats/other-file-format" order="7"/>
+			<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/data_description_generated_Q8" order="8"/>
 		</questions>
 		<conditions/>
 	</questionset>
@@ -1843,7 +1889,6 @@ You can fill the information on this page for each dataset you have created in t
 			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/data_formats_comp_gulp" order="10"/>
 			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/data_formats_comp_gromacs" order="11"/>
 			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/data_formats_comp_lammps" order="12"/>
-			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/simulation_data_formats_others" order="13"/>
 		</options>
 		<conditions/>
 	</optionset>
@@ -1935,7 +1980,7 @@ You can fill the information on this page for each dataset you have created in t
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
 		<uri_path>data_formats_comp_wien2k</uri_path>
 		<dc:comment/>
-		<text lang="en">WEIN2k</text>
+		<text lang="en">WIEN2k</text>
 		<help lang="en">(.struct, .scf, .clmsum)</help>
 		<default_text lang="en"/>
 		<view_text lang="en"/>
@@ -2029,55 +2074,67 @@ You can fill the information on this page for each dataset you have created in t
 		<view_text lang="de"/>
 		<additional_input/>
 	</option>
-	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/simulation_data_formats_others">
+	<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/data-formats/other-file-format">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
-		<uri_path>simulation_data_formats_others</uri_path>
-		<dc:comment/>
-		<text lang="en">Other simulation data file formats</text>
-		<help lang="en">(please specifiy)</help>
-		<default_text lang="en"/>
-		<view_text lang="en"/>
-		<text lang="de"/>
-		<help lang="de"/>
-		<default_text lang="de"/>
-		<view_text lang="de"/>
-		<additional_input>text</additional_input>
-	</option>
-	<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/data-formats/non-simulation_formats_others">
-		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
-		<uri_path>data-formats/non-simulation_formats_others</uri_path>
+		<uri_path>data-formats/other-file-format</uri_path>
 		<dc:comment/>
 		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/format"/>
-		<is_collection>False</is_collection>
-		<is_optional>False</is_optional>
-		<help lang="en">(Please specify)</help>
-		<text lang="en">Other</text>
+		<is_collection>True</is_collection>
+		<is_optional>True</is_optional>
+		<help lang="en">Please select this option for formats not listed above.</help>
+		<text lang="en">Other data formats</text>
 		<default_text lang="en"/>
-		<verbose_name lang="en"/>
+		<verbose_name lang="en">Other file formats</verbose_name>
 		<help lang="de"/>
 		<text lang="de"/>
 		<default_text lang="de"/>
 		<verbose_name lang="de"/>
 		<default_option/>
 		<default_external_id/>
-		<widget_type>textarea</widget_type>
+		<widget_type>checkbox</widget_type>
 		<value_type>text</value_type>
 		<maximum/>
 		<minimum/>
 		<step/>
 		<unit/>
 		<width/>
-		<optionsets/>
+		<optionsets>
+			<optionset dc:uri="https://www.fairmat-nfdi.eu/terms/options/data-formats/other-formats"/>
+		</optionsets>
 		<conditions/>
 	</question>
+	<optionset dc:uri="https://www.fairmat-nfdi.eu/terms/options/data-formats/other-formats">
+		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
+		<uri_path>data-formats/other-formats</uri_path>
+		<dc:comment>Other simulation and non-simulation file formats</dc:comment>
+		<provider_key/>
+		<options>
+			<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/data-formats/other" order="0"/>
+		</options>
+		<conditions/>
+	</optionset>
+	<option dc:uri="https://www.fairmat-nfdi.eu/terms/options/data-formats/other">
+		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
+		<uri_path>data-formats/other</uri_path>
+		<dc:comment/>
+		<text lang="en">Other</text>
+		<help lang="en"/>
+		<default_text lang="en"/>
+		<view_text lang="en"/>
+		<text lang="de"/>
+		<help lang="de"/>
+		<default_text lang="de"/>
+		<view_text lang="de"/>
+		<additional_input>textarea</additional_input>
+	</option>
 	<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/data_description_generated_Q8">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
 		<uri_path>data_description_generated_Q8</uri_path>
 		<dc:comment/>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/storage"/>
+		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/interoperability"/>
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
-		<help lang="en">Use this field to justify your choice of the file format, especially if a properietary or vendor-specific format has been chosen. 
+		<help lang="en">Use this field to justify your choice of the file format, especially if a proprietary or vendor-specific format has been chosen. 
 
 Explain why this file format is suitable for your data. Possible aspects to consider:
 
@@ -2085,7 +2142,7 @@ Explain why this file format is suitable for your data. Possible aspects to cons
 - Does it support long-term accessibility and interoperability with community tools?
 - Is it a community-accepted standard in your research field?
 - Does it allow inclusion of rich metadata (units, experimental conditions, provenance)?</help>
-		<text lang="en">Justification of format choice;</text>
+		<text lang="en">Justification of format choice:</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
 		<help lang="de"/>
@@ -2104,10 +2161,10 @@ Explain why this file format is suitable for your data. Possible aspects to cons
 		<optionsets/>
 		<conditions/>
 	</question>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/storage">
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/interoperability">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>storage</key>
-		<path>project/dataset/storage</path>
+		<key>interoperability</key>
+		<path>project/dataset/interoperability</path>
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
@@ -2563,7 +2620,7 @@ Each dataset should be described individually. For every dataset, include the fo
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
 		<uri_path>reused_data_Q6</uri_path>
 		<dc:comment/>
-		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/data_security/access_permissions"/>
+		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/metadata/access_info"/>
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">Describe how you will obtain the dataset (e.g., “open download from NOMAD repository”, “via Materials Project API”, “on request from corresponding author”, “restricted institutional login”).</help>
@@ -2586,17 +2643,17 @@ Each dataset should be described individually. For every dataset, include the fo
 		<optionsets/>
 		<conditions/>
 	</question>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/data_security/access_permissions">
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/metadata/access_info">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>access_permissions</key>
-		<path>project/dataset/data_security/access_permissions</path>
+		<key>access_info</key>
+		<path>project/dataset/metadata/access_info</path>
 		<dc:comment/>
-		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/data_security"/>
+		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/metadata"/>
 	</attribute>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/data_security">
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/metadata">
 		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>data_security</key>
-		<path>project/dataset/data_security</path>
+		<key>metadata</key>
+		<path>project/dataset/metadata</path>
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
 	</attribute>
@@ -2806,6 +2863,13 @@ Each dataset should normally be described individually. If the same approach app
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/storage"/>
 	</attribute>
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/storage">
+		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
+		<key>storage</key>
+		<path>project/dataset/storage</path>
+		<dc:comment/>
+		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
+	</attribute>
 	<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/documentation_Q2">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
 		<uri_path>documentation_Q2</uri_path>
@@ -2842,18 +2906,11 @@ Examples: *“NOMAD Metainfo schema for simulation outputs”, “NeXus/HDF5 for
 		<dc:comment/>
 		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/metadata"/>
 	</attribute>
-	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/metadata">
-		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
-		<key>metadata</key>
-		<path>project/dataset/metadata</path>
-		<dc:comment/>
-		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
-	</attribute>
 	<question dc:uri="https://www.fairmat-nfdi.eu/terms/questions/documentation_Q4">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
 		<uri_path>documentation_Q4</uri_path>
 		<dc:comment/>
-		<attribute/>
+		<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/metadata"/>
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">Please describe how the provenance of your data can be tracked (e.g., by linking raw and processed data, documenting workflows, and recording software versions and parameters). Consider how other researchers could reproduce your results: is this information documented in your ELN, included in the metadata, or provided as additional accompanying instructions or you have other solutions?</help>
@@ -3269,7 +3326,7 @@ Each dataset should normally be described individually. If identical quality ass
 		<uri_path>storage_backup</uri_path>
 		<dc:comment>Storing and archiving research data in a secure and accessible way is crucial for good research practice. In this section, describe your approach to storing and archiving data and metadata, as well as the planned procedures for dealing with sensitive data during the project.
 This section should deal with the short-term storage and archiving during the project period and completion. The objective is to ensure data accessibility among the project team and external collaborators, and to prevent loss of data due to unforeseen circumstances such as hardware malfunction, theft, or natural disasters.</dc:comment>
-		<title lang="en">Storage and Backup during the Research process</title>
+		<title lang="en">Storage and Backup during the Research Process</title>
 		<short_title lang="en">Storage and Backup</short_title>
 		<title lang="de"/>
 		<short_title lang="de"/>
@@ -3543,6 +3600,20 @@ Examples: “Folders structured by experiment date (YYYY-MM-DD) and sample ID”
 		<optionsets/>
 		<conditions/>
 	</question>
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/data_security/access_permissions">
+		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
+		<key>access_permissions</key>
+		<path>project/dataset/data_security/access_permissions</path>
+		<dc:comment/>
+		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/data_security"/>
+	</attribute>
+	<attribute dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset/data_security">
+		<uri_prefix>https://rdmorganiser.github.io/terms</uri_prefix>
+		<key>data_security</key>
+		<path>project/dataset/data_security</path>
+		<dc:comment/>
+		<parent dc:uri="https://rdmorganiser.github.io/terms/domain/project/dataset"/>
+	</attribute>
 	<page dc:uri="https://www.fairmat-nfdi.eu/terms/questions/storage_backup_2">
 		<uri_prefix>https://www.fairmat-nfdi.eu/terms</uri_prefix>
 		<uri_path>storage_backup_2</uri_path>
@@ -3884,7 +3955,7 @@ Examples: “Daily incremental backups and weekly full backups on the university
 		<is_optional>False</is_optional>
 		<help lang="en">Specify the timing of availability: immediately, upon publication, after a defined embargo (e.g., 6–12 months), or only under restricted access. Embargoes may be justified for intellectual property, patent filing, or industrial collaboration.
 
-Accordingly to the &lt;i&gt;&lt;a href=&quot;https://www.dfg.de/download/pdf/foerderung/grundlagen_dfg_foerderung/forschungsdaten/leitlinien_forschungsdaten.pdf&quot; target=&quot;_blank&quot;&gt;DFG Guidelines for Research Data Management&lt;/a &gt;&lt;/i&gt;, research data should be made available as soon as possible and ideally according to the &lt;i&gt;&lt;a href=&quot;https://force11.org/info/guiding-principles-for-findable-accessible-interoperable-and-re-usable-data-publishing-version-b1-0/&quot; target=&quot;_blank&quot;&gt;FAIR principles&lt;/a&gt;&lt;/i&gt;.
+According to the &lt;i&gt;&lt;a href=&quot;https://www.dfg.de/download/pdf/foerderung/grundlagen_dfg_foerderung/forschungsdaten/leitlinien_forschungsdaten.pdf&quot; target=&quot;_blank&quot;&gt;DFG Guidelines for Research Data Management&lt;/a &gt;&lt;/i&gt;, research data should be made available as soon as possible and ideally according to the &lt;i&gt;&lt;a href=&quot;https://force11.org/info/guiding-principles-for-findable-accessible-interoperable-and-re-usable-data-publishing-version-b1-0/&quot; target=&quot;_blank&quot;&gt;FAIR principles&lt;/a&gt;&lt;/i&gt;.
 
 The importance of data publication is underscored once again by the
 &lt;i&gt;&lt;a href=&quot;https://wissenschaftliche-integritaet.de/en/code-of-conduct/providing-public-access-to-research-results/&quot; target=&quot;_blank&quot;&gt;Guideline 13 of the Code of Good Scientific Practice&lt;/a &gt;&lt;/i&gt;. Discipline-specific practices are pointed out here.</help>
@@ -5175,7 +5246,7 @@ DFG allows you to request project-specific costs for data preparation, documenta
 		<is_collection>False</is_collection>
 		<is_optional>False</is_optional>
 		<help lang="en">Consider workshops, internal RDM training, community events, or professional development for staff.</help>
-		<text lang="en">What costs are associated for training or support that ensures FAIR and sustainable data management?</text>
+		<text lang="en">What costs are associated with training or support that ensures FAIR and sustainable data management?</text>
 		<default_text lang="en"/>
 		<verbose_name lang="en"/>
 		<help lang="de"/>
